@@ -1,0 +1,2353 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "pong";
+      var device = "XC9572XL";
+      signals = new Array("BouncingObjectBouncingObject_D2UIM_SPECSIG","CollisionX1","CollisionX1CollisionX1_CEUIM_SPECSIG","CollisionX2","CollisionX2CollisionX2_CE__INTUIM_SPECSIG","CollisionY1","CollisionY1CollisionY1_CEUIM_SPECSIG","CollisionY2","CollisionY2CollisionY2_CE__INTUIM_SPECSIG","CounterX0_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX3_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX6_SPECSIG","CounterX7_SPECSIG","CounterX8_SPECSIG","CounterX9_SPECSIG","CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG","CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY8_SPECSIG","Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2UIM_SPECSIG","Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2UIM_SPECSIG","Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG","Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_DUIM_SPECSIG","Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_DUIM_SPECSIG","Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG","Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_DUIM_SPECSIG","Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_DUIM_SPECSIG","Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_DUIM_SPECSIG","OpTxBouncingObject71BouncingObject71_D2_INV1752UIM_SPECSIG","OpTxFX_DC1081UIM_SPECSIG","OpTxFX_DC1082UIM_SPECSIG","OpTxFX_DC1087UIM_SPECSIG","OpTxFX_DC1098UIM_SPECSIG","OpTxFX_DC1100UIM_SPECSIG","OpTxFX_DC1101UIM_SPECSIG","OpTxFX_DC1121UIM_SPECSIG","OpTxFX_DC1129UIM_SPECSIG","OpTxFX_DC1131UIM_SPECSIG","OpTxINV1073UIM_SPECSIG","OpTxINV1074UIM_SPECSIG","OpTxINV1076UIM_SPECSIG","OpTxINV1078UIM_SPECSIG","OpTxINV1079UIM_SPECSIG","OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753UIM_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754UIM_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755UIM_SPECSIG","OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756UIM_SPECSIG","OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757UIM_SPECSIG","OpTxOpTxFX_DC1103_INV1746UIM_SPECSIG","OpTxOpTxFX_DC1117_INV1747UIM_SPECSIG","OpTxOpTxFX_DC1118_INV1748UIM_SPECSIG","OpTxOpTxFX_DC1123_INV1749UIM_SPECSIG","OpTxOpTxINV1072_INV1750UIM_SPECSIG","OpTxOpTxINV1075_INV1751UIM_SPECSIG","PaddlePosition_0_0","PaddlePosition_0_1","PaddlePosition_0_2","PaddlePosition_0_3","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_7","PaddlePosition_0_8","ResetCollision","SF0SF0_D2UIM_SPECSIG","SF1SF1_D2UIM_SPECSIG","add0000_addsub00004add0000_addsub0000<4>_DUIM_SPECSIG","add0001_addsub00004add0001_addsub0000<4>_DUIM_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","ballX3_SPECSIG","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","ballX9_SPECSIG","ballY_0_0","ballY_0_1","ballY_0_2","ballY_0_3","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7","ballY_0_8","ball_dirX","ball_dirY","ball_inX","ball_inX_addsub00005ball_inX_addsub0000<5>_DUIM_SPECSIG","ball_inX_addsub00008ball_inX_addsub0000<8>_DUIM_SPECSIG","ball_inY","inDisplayArea","quadAr0_SPECSIG","quadAr1_SPECSIG","quadAr2_SPECSIG","quadBr0_SPECSIG","quadBr1_SPECSIG","quadBr2_SPECSIG","vga_B","vga_G","vga_R","vga_h_sync","vga_v_sync");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","ON","ON","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","ON","ON","ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON");
+      sigTypes = new Array("","D","","D","","D","","D","","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","T","T","T","T","T","T","T","T","T","D","","","","","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","T","D","","","D","T","D","D","D","D","D","D","D","D","D","D","D");
+
+      
+        specSig["quadAr1_SPECSIG"]=new Array("quadAr<1>");
+      
+        specSig["quadBr2_SPECSIG"]=new Array("quadBr<2>");
+      
+        specSig["quadBr1_SPECSIG"]=new Array("quadBr<1>");
+      
+        specSig["quadAr2_SPECSIG"]=new Array("quadAr<2>");
+      
+        specSig["CounterY3_SPECSIG"]=new Array("CounterY<3>");
+      
+        specSig["CounterY4_SPECSIG"]=new Array("CounterY<4>");
+      
+        specSig["CounterY0_SPECSIG"]=new Array("CounterY<0>");
+      
+        specSig["CounterY1_SPECSIG"]=new Array("CounterY<1>");
+      
+        specSig["CounterY2_SPECSIG"]=new Array("CounterY<2>");
+      
+        specSig["CounterX9_SPECSIG"]=new Array("CounterX<9>");
+      
+        specSig["CounterX4_SPECSIG"]=new Array("CounterX<4>");
+      
+        specSig["CounterX5_SPECSIG"]=new Array("CounterX<5>");
+      
+        specSig["CounterX7_SPECSIG"]=new Array("CounterX<7>");
+      
+        specSig["CounterX8_SPECSIG"]=new Array("CounterX<8>");
+      
+        specSig["CounterX6_SPECSIG"]=new Array("CounterX<6>");
+      
+        specSig["CounterX3_SPECSIG"]=new Array("CounterX<3>");
+      
+        specSig["CounterX1_SPECSIG"]=new Array("CounterX<1>");
+      
+        specSig["CounterX2_SPECSIG"]=new Array("CounterX<2>");
+      
+        specSig["CounterX0_SPECSIG"]=new Array("CounterX<0>");
+      
+        specSig["CounterY5_SPECSIG"]=new Array("CounterY<5>");
+      
+        specSig["CounterY6_SPECSIG"]=new Array("CounterY<6>");
+      
+        specSig["CounterY7_SPECSIG"]=new Array("CounterY<7>");
+      
+        specSig["CounterY8_SPECSIG"]=new Array("CounterY<8>");
+      
+        specSig["ballX3_SPECSIG"]=new Array("ballX<3>");
+      
+        specSig["ballX0_SPECSIG"]=new Array("ballX<0>");
+      
+        specSig["ballX1_SPECSIG"]=new Array("ballX<1>");
+      
+        specSig["ballX2_SPECSIG"]=new Array("ballX<2>");
+      
+        specSig["ballX4_SPECSIG"]=new Array("ballX<4>");
+      
+        specSig["ballX5_SPECSIG"]=new Array("ballX<5>");
+      
+        specSig["ballX6_SPECSIG"]=new Array("ballX<6>");
+      
+        specSig["ballX7_SPECSIG"]=new Array("ballX<7>");
+      
+        specSig["ballX8_SPECSIG"]=new Array("ballX<8>");
+      
+        specSig["ballX9_SPECSIG"]=new Array("ballX<9>");
+      
+        specSig["CollisionX2CollisionX2_CE__INT_SPECSIG"]=new Array("CollisionX2/CollisionX2_CE__$INT");
+      
+        specSig["CollisionY2CollisionY2_CE__INT_SPECSIG"]=new Array("CollisionY2/CollisionY2_CE__$INT");
+      
+        specSig["CollisionX1CollisionX1_CE_SPECSIG"]=new Array("CollisionX1/CollisionX1_CE");
+      
+        specSig["CollisionY1CollisionY1_CE_SPECSIG"]=new Array("CollisionY1/CollisionY1_CE");
+      
+        specSig["BouncingObjectBouncingObject_D2_SPECSIG"]=new Array("BouncingObject/BouncingObject_D2");
+      
+        specSig["OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG"]=new Array("$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755");
+      
+        specSig["Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG"]=new Array("Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2");
+      
+        specSig["OpTxOpTxINV1075_INV1751_SPECSIG"]=new Array("$OpTx$$OpTx$INV$1075_INV$1751");
+      
+        specSig["OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG"]=new Array("$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754");
+      
+        specSig["OpTxOpTxINV1072_INV1750_SPECSIG"]=new Array("$OpTx$$OpTx$INV$1072_INV$1750");
+      
+        specSig["ball_inX_addsub00005ball_inX_addsub0000<5>_D_SPECSIG"]=new Array("ball_inX_addsub0000<5>/ball_inX_addsub0000<5>_D");
+      
+        specSig["OpTxINV1073_SPECSIG"]=new Array("$OpTx$INV$1073");
+      
+        specSig["OpTxFX_DC1100_SPECSIG"]=new Array("$OpTx$FX_DC$1100");
+      
+        specSig["OpTxFX_DC1098_SPECSIG"]=new Array("$OpTx$FX_DC$1098");
+      
+        specSig["OpTxINV1074_SPECSIG"]=new Array("$OpTx$INV$1074");
+      
+        specSig["quadAr0_SPECSIG"]=new Array("quadAr<0>");
+      
+        specSig["quadBr0_SPECSIG"]=new Array("quadBr<0>");
+      
+        specSig["Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG"]=new Array("Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D");
+      
+        specSig["Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG"]=new Array("Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D");
+      
+        specSig["OpTxFX_DC1082_SPECSIG"]=new Array("$OpTx$FX_DC$1082");
+      
+        specSig["OpTxINV1076_SPECSIG"]=new Array("$OpTx$INV$1076");
+      
+        specSig["OpTxFX_DC1121_SPECSIG"]=new Array("$OpTx$FX_DC$1121");
+      
+        specSig["Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D_SPECSIG"]=new Array("Mcompar_ball_inX_cmp_eq0000_or0002_xor0000/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D");
+      
+        specSig["Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D_SPECSIG"]=new Array("Mcompar_ball_inX_cmp_eq0001_or0004_xor0001/Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D");
+      
+        specSig["ball_inX_addsub00008ball_inX_addsub0000<8>_D_SPECSIG"]=new Array("ball_inX_addsub0000<8>/ball_inX_addsub0000<8>_D");
+      
+        specSig["add0000_addsub00004add0000_addsub0000<4>_D_SPECSIG"]=new Array("add0000_addsub0000<4>/add0000_addsub0000<4>_D");
+      
+        specSig["CollisionX2CollisionX2_CE__INTUIM_SPECSIG"]=new Array("CollisionX2/CollisionX2_CE__$INT.UIM");
+      
+        specSig["Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D.UIM");
+      
+        specSig["Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_DUIM_SPECSIG"]=new Array("Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D.UIM");
+      
+        specSig["OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755UIM_SPECSIG"]=new Array("$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755.UIM");
+      
+        specSig["OpTxFX_DC1082UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1082.UIM");
+      
+        specSig["OpTxINV1076UIM_SPECSIG"]=new Array("$OpTx$INV$1076.UIM");
+      
+        specSig["OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG"]=new Array("$OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753");
+      
+        specSig["OpTxFX_DC1101_SPECSIG"]=new Array("$OpTx$FX_DC$1101");
+      
+        specSig["OpTxOpTxFX_DC1103_INV1746_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1103_INV$1746");
+      
+        specSig["OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG"]=new Array("$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756");
+      
+        specSig["SF1SF1_D2_SPECSIG"]=new Array("SF1/SF1_D2");
+      
+        specSig["OpTxOpTxFX_DC1118_INV1748_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1118_INV$1748");
+      
+        specSig["OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757_SPECSIG"]=new Array("$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757");
+      
+        specSig["OpTxOpTxFX_DC1117_INV1747_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1117_INV$1747");
+      
+        specSig["SF0SF0_D2_SPECSIG"]=new Array("SF0/SF0_D2");
+      
+        specSig["OpTxFX_DC1129_SPECSIG"]=new Array("$OpTx$FX_DC$1129");
+      
+        specSig["OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG"]=new Array("$OpTx$BouncingObject71/BouncingObject71_D2_INV$1752");
+      
+        specSig["OpTxOpTxFX_DC1123_INV1749_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1123_INV$1749");
+      
+        specSig["Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2_SPECSIG"]=new Array("Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2");
+      
+        specSig["BouncingObjectBouncingObject_D2UIM_SPECSIG"]=new Array("BouncingObject/BouncingObject_D2.UIM");
+      
+        specSig["OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753UIM_SPECSIG"]=new Array("$OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753.UIM");
+      
+        specSig["OpTxFX_DC1101UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1101.UIM");
+      
+        specSig["OpTxOpTxFX_DC1103_INV1746UIM_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1103_INV$1746.UIM");
+      
+        specSig["OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756UIM_SPECSIG"]=new Array("$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756.UIM");
+      
+        specSig["SF1SF1_D2UIM_SPECSIG"]=new Array("SF1/SF1_D2.UIM");
+      
+        specSig["OpTxOpTxFX_DC1118_INV1748UIM_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1118_INV$1748.UIM");
+      
+        specSig["OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757UIM_SPECSIG"]=new Array("$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757.UIM");
+      
+        specSig["OpTxOpTxFX_DC1117_INV1747UIM_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1117_INV$1747.UIM");
+      
+        specSig["SF0SF0_D2UIM_SPECSIG"]=new Array("SF0/SF0_D2.UIM");
+      
+        specSig["OpTxINV1079_SPECSIG"]=new Array("$OpTx$INV$1079");
+      
+        specSig["OpTxFX_DC1129UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1129.UIM");
+      
+        specSig["OpTxINV1079UIM_SPECSIG"]=new Array("$OpTx$INV$1079.UIM");
+      
+        specSig["OpTxBouncingObject71BouncingObject71_D2_INV1752UIM_SPECSIG"]=new Array("$OpTx$BouncingObject71/BouncingObject71_D2_INV$1752.UIM");
+      
+        specSig["OpTxOpTxFX_DC1123_INV1749UIM_SPECSIG"]=new Array("$OpTx$$OpTx$FX_DC$1123_INV$1749.UIM");
+      
+        specSig["Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2UIM_SPECSIG"]=new Array("Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2.UIM");
+      
+        specSig["OpTxFX_DC1121UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1121.UIM");
+      
+        specSig["Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_DUIM_SPECSIG"]=new Array("Mcompar_ball_inX_cmp_eq0000_or0002_xor0000/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D.UIM");
+      
+        specSig["Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_DUIM_SPECSIG"]=new Array("Mcompar_ball_inX_cmp_eq0001_or0004_xor0001/Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D.UIM");
+      
+        specSig["OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754UIM_SPECSIG"]=new Array("$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754.UIM");
+      
+        specSig["OpTxOpTxINV1072_INV1750UIM_SPECSIG"]=new Array("$OpTx$$OpTx$INV$1072_INV$1750.UIM");
+      
+        specSig["ball_inX_addsub00008ball_inX_addsub0000<8>_DUIM_SPECSIG"]=new Array("ball_inX_addsub0000<8>/ball_inX_addsub0000<8>_D.UIM");
+      
+        specSig["ball_inX_addsub00005ball_inX_addsub0000<5>_DUIM_SPECSIG"]=new Array("ball_inX_addsub0000<5>/ball_inX_addsub0000<5>_D.UIM");
+      
+        specSig["add0000_addsub00004add0000_addsub0000<4>_DUIM_SPECSIG"]=new Array("add0000_addsub0000<4>/add0000_addsub0000<4>_D.UIM");
+      
+        specSig["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D_SPECSIG"]=new Array("Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D");
+      
+        specSig["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG"]=new Array("Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D");
+      
+        specSig["Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG"]=new Array("Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D");
+      
+        specSig["OpTxFX_DC1131_SPECSIG"]=new Array("$OpTx$FX_DC$1131");
+      
+        specSig["add0001_addsub00004add0001_addsub0000<4>_D_SPECSIG"]=new Array("add0001_addsub0000<4>/add0001_addsub0000<4>_D");
+      
+        specSig["CollisionY2CollisionY2_CE__INTUIM_SPECSIG"]=new Array("CollisionY2/CollisionY2_CE__$INT.UIM");
+      
+        specSig["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_DUIM_SPECSIG"]=new Array("Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D.UIM");
+      
+        specSig["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D.UIM");
+      
+        specSig["Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_DUIM_SPECSIG"]=new Array("Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D.UIM");
+      
+        specSig["OpTxINV1073UIM_SPECSIG"]=new Array("$OpTx$INV$1073.UIM");
+      
+        specSig["OpTxFX_DC1131UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1131.UIM");
+      
+        specSig["Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2UIM_SPECSIG"]=new Array("Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2.UIM");
+      
+        specSig["OpTxOpTxINV1075_INV1751UIM_SPECSIG"]=new Array("$OpTx$$OpTx$INV$1075_INV$1751.UIM");
+      
+        specSig["add0001_addsub00004add0001_addsub0000<4>_DUIM_SPECSIG"]=new Array("add0001_addsub0000<4>/add0001_addsub0000<4>_D.UIM");
+      
+        specSig["OpTxFX_DC1081_SPECSIG"]=new Array("$OpTx$FX_DC$1081");
+      
+        specSig["OpTxFX_DC1087_SPECSIG"]=new Array("$OpTx$FX_DC$1087");
+      
+        specSig["CollisionX1CollisionX1_CEUIM_SPECSIG"]=new Array("CollisionX1/CollisionX1_CE.UIM");
+      
+        specSig["OpTxFX_DC1081UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1081.UIM");
+      
+        specSig["OpTxFX_DC1100UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1100.UIM");
+      
+        specSig["OpTxFX_DC1087UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1087.UIM");
+      
+        specSig["OpTxFX_DC1098UIM_SPECSIG"]=new Array("$OpTx$FX_DC$1098.UIM");
+      
+        specSig["OpTxINV1074UIM_SPECSIG"]=new Array("$OpTx$INV$1074.UIM");
+      
+        specSig["OpTxINV1078_SPECSIG"]=new Array("$OpTx$INV$1078");
+      
+        specSig["CollisionY1CollisionY1_CEUIM_SPECSIG"]=new Array("CollisionY1/CollisionY1_CE.UIM");
+      
+        specSig["OpTxINV1078UIM_SPECSIG"]=new Array("$OpTx$INV$1078.UIM");
+      
+            pterms["INPUTPINS_1_1"]=new Array("ball_dirX","/CollisionX2","CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirX","CollisionX2","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ball_dirY","/CollisionY2","CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirY","CollisionY2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_1","PaddlePosition_0_2");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_1","/PaddlePosition_0_2");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_1","PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_1","/PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_1","quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_1","/quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_1","quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/PaddlePosition_0_1","/quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_1","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/PaddlePosition_0_1","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/PaddlePosition_0_1","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("PaddlePosition_0_1","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY3_SPECSIG","CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY0_SPECSIG","CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_0","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_0","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_0","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_0","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_0","/quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_0","quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_0","/quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/PaddlePosition_0_0","quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","/quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","/PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","/PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","/quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","/PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","/PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","/quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","/quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_dirX","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ball_dirX","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_dirY","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ball_dirY","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_1","PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_1","/PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_1","quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_1","/quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_1","quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/PaddlePosition_0_1","/quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_1","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/PaddlePosition_0_1","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/PaddlePosition_0_1","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_1","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_7","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_0","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_0","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_0","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_0","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_0","/quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_0","quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_0","/quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/PaddlePosition_0_0","quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("PaddlePosition_0_1","/PaddlePosition_0_2");
+          
+            pterms["INPUTPINS_1_12"]=new Array("PaddlePosition_0_2","/PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_13"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_1");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_7","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_7","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_0","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_0","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_0","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_0","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_0","/quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_0","quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_0","/quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/PaddlePosition_0_0","quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("PaddlePosition_0_1","/PaddlePosition_0_2");
+          
+            pterms["INPUTPINS_1_12"]=new Array("PaddlePosition_0_2","/PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/PaddlePosition_0_4","PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_14"]=new Array("PaddlePosition_0_4","/PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_15"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_1");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_7","/PaddlePosition_0_6","/PaddlePosition_0_0","/PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_7","PaddlePosition_0_6","PaddlePosition_0_0","PaddlePosition_0_8");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_0","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_0","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_0","/quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/PaddlePosition_0_0","quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_0","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_0","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_0","quadAr1_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_0","/quadAr1_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/PaddlePosition_0_4","PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_12"]=new Array("PaddlePosition_0_2","/PaddlePosition_0_5");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_4");
+          
+            pterms["INPUTPINS_1_14"]=new Array("PaddlePosition_0_1","/PaddlePosition_0_2");
+          
+            pterms["INPUTPINS_1_15"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_1");
+          
+            pterms["INPUTPINS_1_16"]=new Array("PaddlePosition_0_5","/PaddlePosition_0_0");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","ballY_0_4","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ball_dirY","ballY_0_4","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","ballY_0_4","ballY_0_5","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirY","ballY_0_4","ballY_0_5","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_5","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_5","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirY","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/PaddlePosition_0_8","quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","PaddlePosition_0_8","/quadBr1_SPECSIG","quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","PaddlePosition_0_8","quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","/PaddlePosition_0_8","/quadBr1_SPECSIG","/quadAr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","/quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","quadAr1_SPECSIG","quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","/quadAr1_SPECSIG","/quadBr1_SPECSIG","quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_3","PaddlePosition_0_1","PaddlePosition_0_7","PaddlePosition_0_2","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_0","/PaddlePosition_0_8","/quadAr1_SPECSIG","quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","/quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_1","/PaddlePosition_0_7","/PaddlePosition_0_2","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_0","PaddlePosition_0_8","quadAr1_SPECSIG","/quadBr1_SPECSIG","/quadAr2_SPECSIG","/quadBr2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_dirX","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ball_dirX","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_dirY","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ball_dirY","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirX","ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","ballX3_SPECSIG","ballX0_SPECSIG","ballX1_SPECSIG","ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/ballX8_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/ballX8_SPECSIG","/ballX3_SPECSIG","/ballX0_SPECSIG","/ballX1_SPECSIG","/ballX2_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirY","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7","ballY_0_3","ballY_0_0","ballY_0_1","ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_7","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","/ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_7","/ballY_0_3","/ballY_0_0","/ballY_0_1","/ballY_0_2","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY0_SPECSIG","CounterY1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirX","/ballX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CollisionX2","CollisionX1");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirX","ballX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ball_dirX","/ballX0_SPECSIG","/ballX1_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirX","ballX0_SPECSIG","ballX1_SPECSIG","/CollisionX1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirX","/ballX0_SPECSIG","/ballX1_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ball_dirX","ballX0_SPECSIG","ballX1_SPECSIG","/CollisionX2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ball_dirY","/ballY_0_0");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CollisionY2","CollisionY1");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ball_dirY","ballY_0_0");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ball_dirY","/ballY_0_0","/ballY_0_1","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ball_dirY","ballY_0_0","ballY_0_1","/CollisionY1","ResetCollision");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ball_dirY","/ballY_0_0","/ballY_0_1","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ball_dirY","ballY_0_0","ballY_0_1","/CollisionY2","ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CollisionX2CollisionX2_CE__INT_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CollisionY2CollisionY2_CE__INT_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CollisionX1CollisionX1_CE_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CollisionY1CollisionY1_CE_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("inDisplayArea","BouncingObjectBouncingObject_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_inY","ball_inX","inDisplayArea");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX4_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","/CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/CounterY0_SPECSIG","/CounterY1_SPECSIG","CounterY2_SPECSIG","/CounterX9_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX7_SPECSIG","/CounterX8_SPECSIG","/CounterX6_SPECSIG","/CounterX3_SPECSIG","/CounterX1_SPECSIG","/CounterX2_SPECSIG","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX1_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY8_SPECSIG","/ballY_0_8","/OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG","OpTxOpTxINV1075_INV1751_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterY5_SPECSIG","/ballY_0_5","/ball_inY");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/CounterY5_SPECSIG","ballY_0_5","/ball_inY");
+          
+            pterms["INPUTPINS_1_4"]=new Array("CounterY6_SPECSIG","/ballY_0_6","/ball_inY");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/CounterY6_SPECSIG","ballY_0_6","/ball_inY");
+          
+            pterms["INPUTPINS_1_6"]=new Array("CounterY7_SPECSIG","/ballY_0_7","/ball_inY");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/CounterY7_SPECSIG","ballY_0_7","/ball_inY");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/CounterY8_SPECSIG","ballY_0_8","/ball_inY");
+          
+            pterms["INPUTPINS_1_9"]=new Array("CounterY8_SPECSIG","/ballY_0_8","/ball_inY");
+          
+            pterms["INPUTPINS_1_10"]=new Array("CounterY1_SPECSIG","/ballY_0_1","/ball_inY");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/CounterY1_SPECSIG","ballY_0_1","/ball_inY");
+          
+            pterms["INPUTPINS_1_12"]=new Array("CounterY0_SPECSIG","/ballY_0_0","/ball_inY");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/CounterY0_SPECSIG","ballY_0_0","/ball_inY");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/CounterY2_SPECSIG","ballY_0_2","/ball_inY");
+          
+            pterms["INPUTPINS_1_15"]=new Array("CounterY2_SPECSIG","/ballY_0_2","/ball_inY");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/CounterY4_SPECSIG","ballY_0_4","/ball_inY");
+          
+            pterms["INPUTPINS_1_17"]=new Array("CounterY4_SPECSIG","/ballY_0_4","/ball_inY");
+          
+            pterms["INPUTPINS_1_18"]=new Array("/CounterY3_SPECSIG","ballY_0_3","/ball_inY");
+          
+            pterms["INPUTPINS_1_19"]=new Array("CounterY3_SPECSIG","/ballY_0_3","/ball_inY");
+          
+            pterms["INPUTPINS_1_20"]=new Array("CounterY8_SPECSIG","ballY_0_8","ball_inY","/OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","/Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG","OpTxOpTxINV1075_INV1751_SPECSIG");
+          
+            pterms["INPUTPINS_1_21"]=new Array("/CounterY8_SPECSIG","/ballY_0_8","ball_inY","/OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","/Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG","OpTxOpTxINV1075_INV1751_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ball_inX","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_inX","/OpTxOpTxINV1072_INV1750_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/CounterX5_SPECSIG","ball_inX","ball_inX_addsub00005ball_inX_addsub0000<5>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("CounterX5_SPECSIG","ball_inX","/ball_inX_addsub00005ball_inX_addsub0000<5>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("ballX9_SPECSIG","/CounterX9_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_6"]=new Array("ballX4_SPECSIG","CounterX4_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/ballX4_SPECSIG","/CounterX4_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/ballX4_SPECSIG","/ballX8_SPECSIG","CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/ballX5_SPECSIG","/ballX8_SPECSIG","CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/ballX6_SPECSIG","/ballX8_SPECSIG","CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/ballX7_SPECSIG","/ballX8_SPECSIG","CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_12"]=new Array("ballX8_SPECSIG","ballX9_SPECSIG","/CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/ballX4_SPECSIG","/ballX9_SPECSIG","CounterX9_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/ballX5_SPECSIG","/ballX9_SPECSIG","CounterX9_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_15"]=new Array("/ballX6_SPECSIG","/ballX9_SPECSIG","CounterX9_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/ballX7_SPECSIG","/ballX9_SPECSIG","CounterX9_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_17"]=new Array("/ballX9_SPECSIG","CounterX9_SPECSIG","CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_18"]=new Array("ballX8_SPECSIG","/CounterX9_SPECSIG","/CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_19"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_20"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","/ballX8_SPECSIG","/CounterX8_SPECSIG","ball_inX");
+          
+            pterms["INPUTPINS_1_21"]=new Array("ballX9_SPECSIG","ballX2_SPECSIG","CounterX9_SPECSIG","CounterX2_SPECSIG","ball_inY","/ball_inX","/OpTxINV1073_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_22"]=new Array("/ballX9_SPECSIG","ballX2_SPECSIG","/CounterX9_SPECSIG","CounterX2_SPECSIG","ball_inY","/ball_inX","/OpTxINV1073_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_23"]=new Array("ballX9_SPECSIG","/ballX2_SPECSIG","CounterX9_SPECSIG","/CounterX2_SPECSIG","ball_inY","/ball_inX","/OpTxINV1073_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_24"]=new Array("/ballX9_SPECSIG","/ballX2_SPECSIG","/CounterX9_SPECSIG","/CounterX2_SPECSIG","ball_inY","/ball_inX","/OpTxINV1073_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","/CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG","inDisplayArea");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CounterY5_SPECSIG","CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG","/inDisplayArea");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/CounterY6_SPECSIG","CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG","/inDisplayArea");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/CounterY7_SPECSIG","CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG","/inDisplayArea");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/CounterY8_SPECSIG","CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG","/inDisplayArea");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadAr0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadBr0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadA");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadAr1_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadB");
+          
+            pterms["INPUTPINS_1_1"]=new Array("quadBr1_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("inDisplayArea","BouncingObjectBouncingObject_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_inY","ball_inX","inDisplayArea");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/CounterY3_SPECSIG","CounterX3_SPECSIG","inDisplayArea");
+          
+            pterms["INPUTPINS_1_4"]=new Array("CounterY3_SPECSIG","/CounterX3_SPECSIG","inDisplayArea");
+          
+            pterms["INPUTPINS_1_1"]=new Array("inDisplayArea","BouncingObjectBouncingObject_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ball_inY","ball_inX","inDisplayArea");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","/CounterX5_SPECSIG","CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","/CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/CounterY0_SPECSIG","/CounterY1_SPECSIG","CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ResetCollision","Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ResetCollision","Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ResetCollision","/OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ResetCollision","/OpTxFX_DC1082_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/ResetCollision","OpTxINV1076_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/ResetCollision","/BouncingObjectBouncingObject_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/ResetCollision","/OpTxFX_DC1121_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/ResetCollision","/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/ResetCollision","Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/ResetCollision","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/ResetCollision","/OpTxOpTxINV1072_INV1750_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/CounterX8_SPECSIG","/ResetCollision","ball_inX_addsub00008ball_inX_addsub0000<8>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("CounterX8_SPECSIG","/ResetCollision","/ball_inX_addsub00008ball_inX_addsub0000<8>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/CounterX5_SPECSIG","/ResetCollision","ball_inX_addsub00005ball_inX_addsub0000<5>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("CounterX5_SPECSIG","/ResetCollision","/ball_inX_addsub00005ball_inX_addsub0000<5>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("CounterY4_SPECSIG","/ResetCollision","/add0000_addsub00004add0000_addsub0000<4>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("/CounterY4_SPECSIG","/ResetCollision","add0000_addsub00004add0000_addsub0000<4>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("/CounterY5_SPECSIG","/ballY_0_4","ballY_0_5","/ResetCollision");
+          
+            pterms["INPUTPINS_1_19"]=new Array("/CounterY5_SPECSIG","ballY_0_5","/ballY_0_3","/ResetCollision");
+          
+            pterms["INPUTPINS_1_20"]=new Array("CounterY5_SPECSIG","/ballY_0_4","/ballY_0_5","/ResetCollision");
+          
+            pterms["INPUTPINS_1_21"]=new Array("CounterY5_SPECSIG","/ballY_0_5","/ballY_0_3","/ResetCollision");
+          
+            pterms["INPUTPINS_1_22"]=new Array("CounterY5_SPECSIG","ballY_0_4","ballY_0_5","ballY_0_3","/ResetCollision");
+          
+            pterms["INPUTPINS_1_23"]=new Array("/CounterY5_SPECSIG","ballY_0_4","/ballY_0_5","ballY_0_3","/ResetCollision");
+          
+            pterms["INPUTPINS_1_24"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","ballX9_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_25"]=new Array("ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7","ballY_0_3","ballY_0_8","/ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY7_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ballY_0_4","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballY_0_5","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/ballY_0_7","/ballY_0_3");
+          
+            pterms["INPUTPINS_1_6"]=new Array("ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7","ballY_0_3");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ballY_0_4","/ballY_0_8");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballY_0_5","/ballY_0_8");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ballY_0_6","/ballY_0_8");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/ballY_0_7","/ballY_0_8");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/ballY_0_3","/ballY_0_8");
+          
+            pterms["INPUTPINS_1_7"]=new Array("ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7","ballY_0_3","ballY_0_8");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY1_SPECSIG","/ballY_0_1");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CounterY1_SPECSIG","ballY_0_1");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CounterY0_SPECSIG","/ballY_0_0");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/CounterY0_SPECSIG","ballY_0_0");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/CounterY2_SPECSIG","ballY_0_2");
+          
+            pterms["INPUTPINS_1_6"]=new Array("CounterY2_SPECSIG","/ballY_0_2");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/CounterY3_SPECSIG","ballY_0_3");
+          
+            pterms["INPUTPINS_1_8"]=new Array("CounterY3_SPECSIG","/ballY_0_3");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballY_0_2");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY1_SPECSIG","/ballY_0_1");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CounterY1_SPECSIG","ballY_0_1");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CounterY0_SPECSIG","/ballY_0_0");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/CounterY0_SPECSIG","ballY_0_0");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY3_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY7_SPECSIG","/CounterY3_SPECSIG","/CounterY4_SPECSIG","/CounterY8_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CounterX9_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","/CounterX7_SPECSIG","/CounterX8_SPECSIG","CounterX6_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/CounterX9_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX7_SPECSIG","/CounterX8_SPECSIG","/CounterX6_SPECSIG","/CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG","/OpTxFX_DC1101_SPECSIG","OpTxOpTxFX_DC1103_INV1746_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxFX_DC1101_SPECSIG","OpTxOpTxFX_DC1103_INV1746_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","OpTxOpTxFX_DC1103_INV1746_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxOpTxFX_DC1118_INV1748_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","OpTxOpTxFX_DC1103_INV1746_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757_SPECSIG","/OpTxOpTxFX_DC1117_INV1747_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG","/OpTxFX_DC1101_SPECSIG","/SF0SF0_D2_SPECSIG","OpTxFX_DC1129_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxFX_DC1101_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG","/SF0SF0_D2_SPECSIG","OpTxFX_DC1129_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxOpTxFX_DC1118_INV1748_SPECSIG","/SF0SF0_D2_SPECSIG","OpTxFX_DC1129_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG","/OpTxFX_DC1101_SPECSIG","/OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG","/OpTxOpTxFX_DC1123_INV1749_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxFX_DC1101_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG","/OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG","/OpTxOpTxFX_DC1123_INV1749_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxOpTxFX_DC1118_INV1748_SPECSIG","/OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG","/OpTxOpTxFX_DC1123_INV1749_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","OpTxFX_DC1101_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxOpTxFX_DC1118_INV1748_SPECSIG","/Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","PaddlePosition_0_8","/CounterX9_SPECSIG","/CounterX8_SPECSIG","OpTxOpTxFX_DC1103_INV1746_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG","/OpTxOpTxFX_DC1103_INV1746_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG","/SF0SF0_D2_SPECSIG","OpTxFX_DC1129_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757_SPECSIG","/OpTxOpTxFX_DC1117_INV1747_SPECSIG","/SF0SF0_D2_SPECSIG","OpTxFX_DC1129_SPECSIG");
+          
+            pterms["INPUTPINS_1_19"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG","/OpTxOpTxFX_DC1103_INV1746_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG","/OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG","/OpTxOpTxFX_DC1123_INV1749_SPECSIG");
+          
+            pterms["INPUTPINS_1_20"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757_SPECSIG","/OpTxOpTxFX_DC1117_INV1747_SPECSIG","/OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG","/OpTxOpTxFX_DC1123_INV1749_SPECSIG");
+          
+            pterms["INPUTPINS_1_21"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","/OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753_SPECSIG","OpTxFX_DC1101_SPECSIG","/OpTxOpTxFX_DC1103_INV1746_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756_SPECSIG","/Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_22"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","OpTxFX_DC1101_SPECSIG","/SF1SF1_D2_SPECSIG","/OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757_SPECSIG","/OpTxOpTxFX_DC1117_INV1747_SPECSIG","/Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_23"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","PaddlePosition_0_8","/CounterX9_SPECSIG","/CounterX8_SPECSIG","/SF0SF0_D2_SPECSIG","OpTxFX_DC1129_SPECSIG");
+          
+            pterms["INPUTPINS_1_24"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","PaddlePosition_0_8","/CounterX9_SPECSIG","/CounterX8_SPECSIG","/OpTxBouncingObject71BouncingObject71_D2_INV1752_SPECSIG","/OpTxOpTxFX_DC1123_INV1749_SPECSIG");
+          
+            pterms["INPUTPINS_1_25"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","CounterY8_SPECSIG","PaddlePosition_0_8","/CounterX9_SPECSIG","/CounterX8_SPECSIG","OpTxFX_DC1101_SPECSIG","/Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_7");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX9_SPECSIG","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_8","CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_7","PaddlePosition_0_6","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_7","PaddlePosition_0_6","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","/PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_7","PaddlePosition_0_4","/PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_7","PaddlePosition_0_5","/PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_7","/PaddlePosition_0_6","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_7","/PaddlePosition_0_4","/PaddlePosition_0_5","PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_7","/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_7","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_7","CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_8","CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_7","/PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_7","PaddlePosition_0_4","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_7","PaddlePosition_0_5","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_7","PaddlePosition_0_6","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_6","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_4","/PaddlePosition_0_6","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_5","/PaddlePosition_0_6","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("PaddlePosition_0_7","PaddlePosition_0_5","PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("PaddlePosition_0_7","PaddlePosition_0_6","PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","PaddlePosition_0_6","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","/PaddlePosition_0_8","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_7","/PaddlePosition_0_4","/PaddlePosition_0_5","/PaddlePosition_0_6","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_4","PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","PaddlePosition_0_5","CounterX4_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_4","CounterX4_SPECSIG","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_4","/PaddlePosition_0_5","CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_4","/PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_4","CounterX5_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_4","/PaddlePosition_0_5","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_2","CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_3","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_1","/PaddlePosition_0_2","CounterX1_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_1","CounterX1_SPECSIG","CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_1","/PaddlePosition_0_2","/PaddlePosition_0_0","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/PaddlePosition_0_1","/PaddlePosition_0_0","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_2","/PaddlePosition_0_0","CounterX1_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/PaddlePosition_0_0","CounterX1_SPECSIG","CounterX2_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_4","/PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_5","CounterX4_SPECSIG","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_4","PaddlePosition_0_5","CounterX4_SPECSIG","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_4","/PaddlePosition_0_5","CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_7","PaddlePosition_0_8","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_8","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_4","PaddlePosition_0_8","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_5","PaddlePosition_0_8","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_6","PaddlePosition_0_8","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_7","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_4","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_5","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_6","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_6","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/PaddlePosition_0_4","PaddlePosition_0_6","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/PaddlePosition_0_5","PaddlePosition_0_6","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("PaddlePosition_0_3","PaddlePosition_0_4","PaddlePosition_0_5","/PaddlePosition_0_6","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_8","/CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","/PaddlePosition_0_8","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/PaddlePosition_0_5","CounterX4_SPECSIG","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/PaddlePosition_0_5","CounterX5_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/PaddlePosition_0_5","CounterX5_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","CounterX4_SPECSIG","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_3","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_3","PaddlePosition_0_4","PaddlePosition_0_5","CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_3","PaddlePosition_0_4","PaddlePosition_0_5","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_3","PaddlePosition_0_4","PaddlePosition_0_5","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX4_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/PaddlePosition_0_4","CounterX4_SPECSIG","CounterX5_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX3_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("PaddlePosition_0_3","PaddlePosition_0_4","PaddlePosition_0_5","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX4_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","CounterX5_SPECSIG","CounterX3_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_5","CounterX4_SPECSIG","CounterX3_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_19"]=new Array("/PaddlePosition_0_3","/PaddlePosition_0_4","/PaddlePosition_0_5","CounterX3_SPECSIG","/OpTxINV1079_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("PaddlePosition_0_2","/CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_1","PaddlePosition_0_2","/CounterX1_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_1","/CounterX1_SPECSIG","/CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_1","PaddlePosition_0_2","PaddlePosition_0_0","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_1","PaddlePosition_0_0","/CounterX2_SPECSIG","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_2","PaddlePosition_0_0","/CounterX1_SPECSIG","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("PaddlePosition_0_0","/CounterX1_SPECSIG","/CounterX2_SPECSIG","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_4","PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_4"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_5","PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_5"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_6","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("PaddlePosition_0_7","/PaddlePosition_0_6","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/PaddlePosition_0_7","PaddlePosition_0_6","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","/PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_9"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("PaddlePosition_0_3","/PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("PaddlePosition_0_8","/CounterX9_SPECSIG","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","/CounterX9_SPECSIG","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6","PaddlePosition_0_8","/CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("PaddlePosition_0_3","PaddlePosition_0_7","PaddlePosition_0_4","PaddlePosition_0_5","PaddlePosition_0_6");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY6_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ballY_0_4","/ballY_0_6");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballY_0_5","/ballY_0_6");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ballY_0_6","/ballY_0_3");
+          
+            pterms["INPUTPINS_1_5"]=new Array("ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_3");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX9_SPECSIG","/CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX9_SPECSIG","CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ballX1_SPECSIG","CounterX1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX1_SPECSIG","/CounterX1_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX0_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ballX0_SPECSIG","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("ballX2_SPECSIG","/CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/ballX2_SPECSIG","CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("ballX3_SPECSIG","/CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/ballX3_SPECSIG","CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ballX4_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX4_SPECSIG","ballX6_SPECSIG","/ballX7_SPECSIG","/CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ballX5_SPECSIG","ballX6_SPECSIG","/ballX7_SPECSIG","/CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/ballX4_SPECSIG","/ballX6_SPECSIG","ballX7_SPECSIG","CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/ballX5_SPECSIG","/ballX6_SPECSIG","ballX7_SPECSIG","CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/ballX4_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","/ballX6_SPECSIG","ballX7_SPECSIG","CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","/ballX6_SPECSIG","/ballX7_SPECSIG","/CounterX7_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","/ballX7_SPECSIG","CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","/CounterX7_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballY_0_4");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballY_0_3");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ResetCollision","Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ResetCollision","Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ResetCollision","Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ResetCollision","/OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/ResetCollision","OpTxINV1073_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/ResetCollision","/OpTxFX_DC1131_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/ResetCollision","/BouncingObjectBouncingObject_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/ResetCollision","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/ResetCollision","/OpTxOpTxINV1075_INV1751_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("ballY_0_8","/ResetCollision","Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/CounterY8_SPECSIG","/ResetCollision","Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/CounterY8_SPECSIG","ballY_0_8","/ResetCollision");
+          
+            pterms["INPUTPINS_1_13"]=new Array("CounterX4_SPECSIG","/ResetCollision","/add0001_addsub00004add0001_addsub0000<4>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/CounterX4_SPECSIG","/ResetCollision","add0001_addsub00004add0001_addsub0000<4>_D_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("ballX2_SPECSIG","/ResetCollision","/CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/ballX2_SPECSIG","/ResetCollision","CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("CounterY8_SPECSIG","/ballY_0_8","/ResetCollision","/Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("/ballX4_SPECSIG","ballX5_SPECSIG","/CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_19"]=new Array("ballX5_SPECSIG","/ballX3_SPECSIG","/CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_20"]=new Array("/ballX4_SPECSIG","/ballX5_SPECSIG","CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_21"]=new Array("/ballX5_SPECSIG","/ballX3_SPECSIG","CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_22"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX3_SPECSIG","CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_23"]=new Array("ballX4_SPECSIG","/ballX5_SPECSIG","ballX3_SPECSIG","/CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_24"]=new Array("ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","ballX9_SPECSIG","/CounterX5_SPECSIG","/ResetCollision");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX6_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX6_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX7_SPECSIG","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX7_SPECSIG","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX8_SPECSIG","ballX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX9_SPECSIG","/CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX9_SPECSIG","CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ballX1_SPECSIG","CounterX1_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX1_SPECSIG","/CounterX1_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX0_SPECSIG","CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ballX0_SPECSIG","/CounterX0_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX7_SPECSIG","ballX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX8_SPECSIG","/CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX8_SPECSIG","CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","/ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_4"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","/ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_5"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_6"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","/ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_7"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_8"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","/ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_11"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY7_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","/ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_15"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_7");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY7_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","/ballY_0_6","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ballX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY4_SPECSIG","ballY_0_4","ballY_0_5","ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("/CounterY5_SPECSIG","CounterY6_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","/ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","/ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY4_SPECSIG","ballY_0_4","ballY_0_5","/ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY4_SPECSIG","/ballY_0_4","ballY_0_5","/ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","/ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","/ballY_0_6","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","CounterY4_SPECSIG","ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY4_SPECSIG","/ballY_0_4","/ballY_0_5","/ballY_0_6","/ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","ballY_0_6","/ballY_0_7","ballY_0_3","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("/CounterY5_SPECSIG","/CounterY6_SPECSIG","/CounterY4_SPECSIG","ballY_0_4","ballY_0_5","ballY_0_6","ballY_0_3","/ballY_0_8","/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D_SPECSIG","OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755_SPECSIG","OpTxFX_DC1082_SPECSIG","/OpTxINV1076_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1081_SPECSIG","OpTxFX_DC1100_SPECSIG","OpTxFX_DC1087_SPECSIG","OpTxFX_DC1098_SPECSIG","/OpTxINV1074_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX2_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX3_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX9_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX8_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("/ballX5_SPECSIG","CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_2"]=new Array("ballX5_SPECSIG","/CounterX5_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("/ballX7_SPECSIG","CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("ballX7_SPECSIG","/CounterX7_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("/ballX6_SPECSIG","CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("ballX6_SPECSIG","/CounterX6_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/ballX4_SPECSIG","CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("ballX4_SPECSIG","/CounterX4_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("ResetCollision");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_3"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","/ballX3_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/ballX4_SPECSIG","/ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG","CounterX4_SPECSIG","/CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_5"]=new Array("ballX4_SPECSIG","/ballX5_SPECSIG","ballX6_SPECSIG","/ballX3_SPECSIG","CounterX4_SPECSIG","/CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/ballX4_SPECSIG","ballX5_SPECSIG","/ballX6_SPECSIG","ballX3_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_7"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","/ballX6_SPECSIG","/ballX3_SPECSIG","CounterX4_SPECSIG","CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_8"]=new Array("/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","ballX3_SPECSIG","CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_9"]=new Array("ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX3_SPECSIG","CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","/ballX3_SPECSIG","/CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_11"]=new Array("ballX4_SPECSIG","/ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG","/CounterX4_SPECSIG","CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/ballX4_SPECSIG","/ballX5_SPECSIG","ballX6_SPECSIG","/ballX3_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_13"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","/ballX6_SPECSIG","ballX3_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_14"]=new Array("/ballX4_SPECSIG","ballX5_SPECSIG","/ballX6_SPECSIG","/ballX3_SPECSIG","/CounterX4_SPECSIG","CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_15"]=new Array("ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","ballX3_SPECSIG","/CounterX4_SPECSIG","CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_16"]=new Array("/ballX4_SPECSIG","/ballX5_SPECSIG","/ballX6_SPECSIG","/ballX3_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_17"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","/ballX7_SPECSIG","ballX3_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_18"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","/ballX8_SPECSIG","ballX3_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_19"]=new Array("ballX4_SPECSIG","ballX5_SPECSIG","ballX6_SPECSIG","ballX3_SPECSIG","/ballX9_SPECSIG","/CounterX4_SPECSIG","/CounterX5_SPECSIG","/CounterX6_SPECSIG","BouncingObjectBouncingObject_D2_SPECSIG","OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D_SPECSIG","/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D_SPECSIG","/OpTxINV1073_SPECSIG","OpTxFX_DC1131_SPECSIG","OpTxFX_DC1081_SPECSIG","/OpTxINV1078_SPECSIG");
+          
+            pterms["INPUTPINS_1_1"]=new Array("CounterY5_SPECSIG","/ballY_0_5");
+          
+            pterms["INPUTPINS_1_2"]=new Array("/CounterY5_SPECSIG","ballY_0_5");
+          
+            pterms["INPUTPINS_1_3"]=new Array("CounterY6_SPECSIG","/ballY_0_6");
+          
+            pterms["INPUTPINS_1_4"]=new Array("/CounterY6_SPECSIG","ballY_0_6");
+          
+            pterms["INPUTPINS_1_5"]=new Array("CounterY7_SPECSIG","/ballY_0_7");
+          
+            pterms["INPUTPINS_1_6"]=new Array("/CounterY7_SPECSIG","ballY_0_7");
+          
+            pterms["INPUTPINS_1_7"]=new Array("/CounterY8_SPECSIG","ballY_0_8");
+          
+            pterms["INPUTPINS_1_8"]=new Array("CounterY8_SPECSIG","/ballY_0_8");
+          
+            pterms["INPUTPINS_1_9"]=new Array("CounterY1_SPECSIG","/ballY_0_1");
+          
+            pterms["INPUTPINS_1_10"]=new Array("/CounterY1_SPECSIG","ballY_0_1");
+          
+            pterms["INPUTPINS_1_11"]=new Array("CounterY0_SPECSIG","/ballY_0_0");
+          
+            pterms["INPUTPINS_1_12"]=new Array("/CounterY0_SPECSIG","ballY_0_0");
+          
+            pterms["INPUTPINS_1_13"]=new Array("/CounterY2_SPECSIG","ballY_0_2");
+          
+            pterms["INPUTPINS_1_14"]=new Array("CounterY2_SPECSIG","/ballY_0_2");
+          
+            pterms["INPUTPINS_1_15"]=new Array("/CounterY4_SPECSIG","ballY_0_4");
+          
+            pterms["INPUTPINS_1_16"]=new Array("CounterY4_SPECSIG","/ballY_0_4");
+          
+            pterms["INPUTPINS_1_17"]=new Array("/CounterY3_SPECSIG","ballY_0_3");
+          
+            pterms["INPUTPINS_1_18"]=new Array("CounterY3_SPECSIG","/ballY_0_3");
+          
+          d2["ball_dirX"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["ball_dirX"]=new Array("1","1");
+          
+              gblclk["ball_dirX"]=new Array("clk");
+            prld["ball_dirX"]="GND";
+          d2["ball_dirY"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["ball_dirY"]=new Array("1","1");
+          
+              gblclk["ball_dirY"]=new Array("clk");
+            prld["ball_dirY"]="GND";
+          d2["PaddlePosition_0_3"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14");
+          
+            d2imp["PaddlePosition_0_3"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_3"]=new Array("clk");
+            prld["PaddlePosition_0_3"]="GND";
+          d2["CounterY5_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY5_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY5_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY5_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY5_SPECSIG"]=new Array("1");
+          prld["CounterY5_SPECSIG"]="GND";
+          d2["CounterY6_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY6_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY6_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY6_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY6_SPECSIG"]=new Array("1");
+          prld["CounterY6_SPECSIG"]="GND";
+          d2["CounterY7_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY7_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY7_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY7_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY7_SPECSIG"]=new Array("1");
+          prld["CounterY7_SPECSIG"]="GND";
+          d2["CounterY3_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY3_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY3_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY3_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY3_SPECSIG"]=new Array("1");
+          prld["CounterY3_SPECSIG"]="GND";
+          d2["CounterY4_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY4_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY4_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY4_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY4_SPECSIG"]=new Array("1");
+          prld["CounterY4_SPECSIG"]="GND";
+          d2["CounterY8_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY8_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY8_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY8_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY8_SPECSIG"]=new Array("1");
+          prld["CounterY8_SPECSIG"]="GND";
+          d2["PaddlePosition_0_1"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10");
+          
+            d2imp["PaddlePosition_0_1"]=new Array("1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_1"]=new Array("clk");
+            prld["PaddlePosition_0_1"]="GND";
+          d2["PaddlePosition_0_7"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16");
+          
+            d2imp["PaddlePosition_0_7"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_7"]=new Array("clk");
+            prld["PaddlePosition_0_7"]="GND";
+          d2["ballX4_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX4_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX4_SPECSIG"]=new Array("clk");
+            prld["ballX4_SPECSIG"]="GND";
+          d2["ballY_0_4"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_4"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_4"]=new Array("clk");
+            prld["ballY_0_4"]="GND";
+          d2["PaddlePosition_0_2"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12");
+          
+            d2imp["PaddlePosition_0_2"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_2"]=new Array("clk");
+            prld["PaddlePosition_0_2"]="GND";
+          d2["PaddlePosition_0_4"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14");
+          
+            d2imp["PaddlePosition_0_4"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_4"]=new Array("clk");
+            prld["PaddlePosition_0_4"]="GND";
+          d2["PaddlePosition_0_5"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16");
+          
+            d2imp["PaddlePosition_0_5"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_5"]=new Array("clk");
+            prld["PaddlePosition_0_5"]="GND";
+          d2["PaddlePosition_0_6"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16");
+          
+            d2imp["PaddlePosition_0_6"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_6"]=new Array("clk");
+            prld["PaddlePosition_0_6"]="GND";
+          d2["ballX5_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX5_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX5_SPECSIG"]=new Array("clk");
+            prld["ballX5_SPECSIG"]="GND";
+          d2["ballX6_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX6_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX6_SPECSIG"]=new Array("clk");
+            prld["ballX6_SPECSIG"]="GND";
+          d2["ballX7_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX7_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX7_SPECSIG"]=new Array("clk");
+            prld["ballX7_SPECSIG"]="GND";
+          d2["ballX8_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX8_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX8_SPECSIG"]=new Array("clk");
+            prld["ballX8_SPECSIG"]="GND";
+          d2["ballY_0_5"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_5"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_5"]=new Array("clk");
+            prld["ballY_0_5"]="GND";
+          d2["ballY_0_6"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_6"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_6"]=new Array("clk");
+            prld["ballY_0_6"]="GND";
+          d2["ballY_0_7"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_7"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_7"]=new Array("clk");
+            prld["ballY_0_7"]="GND";
+          d2["PaddlePosition_0_0"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12");
+          
+            d2imp["PaddlePosition_0_0"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_0"]=new Array("clk");
+            prld["PaddlePosition_0_0"]="GND";
+          d2["PaddlePosition_0_8"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8");
+          
+            d2imp["PaddlePosition_0_8"]=new Array("1","1","1","1","1","1","1","1");
+          
+              gblclk["PaddlePosition_0_8"]=new Array("clk");
+            prld["PaddlePosition_0_8"]="GND";
+          d2["ballX3_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX3_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX3_SPECSIG"]=new Array("clk");
+            prld["ballX3_SPECSIG"]="GND";
+          d2["ballY_0_3"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_3"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_3"]=new Array("clk");
+            prld["ballY_0_3"]="GND";
+          d2["CounterY0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["CounterY0_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY0_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY0_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            ceimp["CounterY0_SPECSIG"]=new Array("1");
+          prld["CounterY0_SPECSIG"]="GND";
+          d2["ballX9_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX9_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX9_SPECSIG"]=new Array("clk");
+            prld["ballX9_SPECSIG"]="GND";
+          d2["ballY_0_8"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_8"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_8"]=new Array("clk");
+            prld["ballY_0_8"]="GND";
+          d2["CounterY1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY1_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY1_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY1_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY1_SPECSIG"]=new Array("1");
+          prld["CounterY1_SPECSIG"]="GND";
+          d2["CounterY2_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterY2_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterY2_SPECSIG"]=new Array("clk");
+            
+          ce["CounterY2_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CounterY2_SPECSIG"]=new Array("1");
+          prld["CounterY2_SPECSIG"]="GND";
+          d2["ballX0_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["ballX0_SPECSIG"]=new Array("1","1");
+          
+              gblclk["ballX0_SPECSIG"]=new Array("clk");
+            prld["ballX0_SPECSIG"]="GND";
+          d2["ballY_0_0"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["ballY_0_0"]=new Array("1","1");
+          
+              gblclk["ballY_0_0"]=new Array("clk");
+            prld["ballY_0_0"]="GND";
+          d2["ballX1_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX1_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX1_SPECSIG"]=new Array("clk");
+            prld["ballX1_SPECSIG"]="GND";
+          d2["ballX2_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballX2_SPECSIG"]=new Array("1","1","1","1");
+          
+              gblclk["ballX2_SPECSIG"]=new Array("clk");
+            prld["ballX2_SPECSIG"]="GND";
+          d2["ballY_0_1"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_1"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_1"]=new Array("clk");
+            prld["ballY_0_1"]="GND";
+          d2["ballY_0_2"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["ballY_0_2"]=new Array("1","1","1","1");
+          
+              gblclk["ballY_0_2"]=new Array("clk");
+            prld["ballY_0_2"]="GND";
+          d2["CollisionX2"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CollisionX2"]=new Array("1");
+          
+              gblclk["CollisionX2"]=new Array("clk");
+            
+          ce["CollisionX2"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CollisionX2"]=new Array("1");
+          prld["CollisionX2"]="GND";
+          d2["CollisionY2"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CollisionY2"]=new Array("1");
+          
+              gblclk["CollisionY2"]=new Array("clk");
+            
+          ce["CollisionY2"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CollisionY2"]=new Array("1");
+          prld["CollisionY2"]="GND";
+          d2["CollisionX1"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CollisionX1"]=new Array("1");
+          
+              gblclk["CollisionX1"]=new Array("clk");
+            
+          ce["CollisionX1"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CollisionX1"]=new Array("1");
+          prld["CollisionX1"]="GND";
+          d2["CollisionY1"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CollisionY1"]=new Array("1");
+          
+              gblclk["CollisionY1"]=new Array("clk");
+            
+          ce["CollisionY1"]=new Array("INPUTPINS_1_2");
+          
+            ceimp["CollisionY1"]=new Array("1");
+          prld["CollisionY1"]="GND";
+          d2["vga_G"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["vga_G"]=new Array("1","1");
+          
+              gblclk["vga_G"]=new Array("clk");
+            prld["vga_G"]="GND";
+          d2["CounterX9_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["CounterX9_SPECSIG"]=new Array("1","1");
+          
+              gblclk["CounterX9_SPECSIG"]=new Array("clk");
+            prld["CounterX9_SPECSIG"]="GND";
+          d2["CounterX4_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX4_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX4_SPECSIG"]=new Array("clk");
+            prld["CounterX4_SPECSIG"]="GND";
+          d2["CounterX5_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX5_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX5_SPECSIG"]=new Array("clk");
+            prld["CounterX5_SPECSIG"]="GND";
+          d2["CounterX7_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX7_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX7_SPECSIG"]=new Array("clk");
+            prld["CounterX7_SPECSIG"]="GND";
+          d2["CounterX8_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["CounterX8_SPECSIG"]=new Array("1","1");
+          
+              gblclk["CounterX8_SPECSIG"]=new Array("clk");
+            prld["CounterX8_SPECSIG"]="GND";
+          d2["CounterX6_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX6_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX6_SPECSIG"]=new Array("clk");
+            prld["CounterX6_SPECSIG"]="GND";
+          d2["CounterX3_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX3_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX3_SPECSIG"]=new Array("clk");
+            prld["CounterX3_SPECSIG"]="GND";
+          d2["ResetCollision"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["ResetCollision"]=new Array("1");
+          
+              gblclk["ResetCollision"]=new Array("clk");
+            prld["ResetCollision"]="GND";
+          d2["CounterX1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX1_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX1_SPECSIG"]=new Array("clk");
+            prld["CounterX1_SPECSIG"]="GND";
+          d2["CounterX2_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["CounterX2_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX2_SPECSIG"]=new Array("clk");
+            prld["CounterX2_SPECSIG"]="GND";
+          d2["CounterX0_SPECSIG"]=new Array("VCC");
+          
+            d2imp["CounterX0_SPECSIG"]=new Array("1");
+          
+              gblclk["CounterX0_SPECSIG"]=new Array("clk");
+            prld["CounterX0_SPECSIG"]="GND";
+          d2["ball_inY"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19","INPUTPINS_1_20","INPUTPINS_1_21");
+          
+            d2imp["ball_inY"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["ball_inY"]=new Array("clk");
+            prld["ball_inY"]="GND";
+          d2["ball_inX"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19","INPUTPINS_1_20","INPUTPINS_1_21","INPUTPINS_1_22","INPUTPINS_1_23","INPUTPINS_1_24");
+          
+            d2imp["ball_inX"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+              gblclk["ball_inX"]=new Array("clk");
+            prld["ball_inX"]="GND";
+          d2["inDisplayArea"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5");
+          
+            d2imp["inDisplayArea"]=new Array("1","1","1","1","1");
+          
+              gblclk["inDisplayArea"]=new Array("clk");
+            prld["inDisplayArea"]="GND";
+          d2["quadAr1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["quadAr1_SPECSIG"]=new Array("1");
+          
+              gblclk["quadAr1_SPECSIG"]=new Array("clk");
+            prld["quadAr1_SPECSIG"]="GND";
+          d2["quadBr1_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["quadBr1_SPECSIG"]=new Array("1");
+          
+              gblclk["quadBr1_SPECSIG"]=new Array("clk");
+            prld["quadBr1_SPECSIG"]="GND";
+          d2["quadAr0_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["quadAr0_SPECSIG"]=new Array("1");
+          
+              gblclk["quadAr0_SPECSIG"]=new Array("clk");
+            prld["quadAr0_SPECSIG"]="GND";
+          d2["quadAr2_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["quadAr2_SPECSIG"]=new Array("1");
+          
+              gblclk["quadAr2_SPECSIG"]=new Array("clk");
+            prld["quadAr2_SPECSIG"]="GND";
+          d2["quadBr0_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["quadBr0_SPECSIG"]=new Array("1");
+          
+              gblclk["quadBr0_SPECSIG"]=new Array("clk");
+            prld["quadBr0_SPECSIG"]="GND";
+          d2["quadBr2_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["quadBr2_SPECSIG"]=new Array("1");
+          
+              gblclk["quadBr2_SPECSIG"]=new Array("clk");
+            prld["quadBr2_SPECSIG"]="GND";
+          d2["vga_R"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["vga_R"]=new Array("1","1","1","1");
+          
+              gblclk["vga_R"]=new Array("clk");
+            prld["vga_R"]="GND";
+          d2["vga_B"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["vga_B"]=new Array("1","1");
+          
+              gblclk["vga_B"]=new Array("clk");
+            prld["vga_B"]="GND";
+          d2["vga_h_sync"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["vga_h_sync"]=new Array("1");
+          
+              gblclk["vga_h_sync"]=new Array("clk");
+            prld["vga_h_sync"]="VCC";
+          d2["vga_v_sync"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["vga_v_sync"]=new Array("1");
+          
+              gblclk["vga_v_sync"]=new Array("clk");
+            prld["vga_v_sync"]="VCC";
+          d2["CollisionX2CollisionX2_CE__INTUIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19","INPUTPINS_1_20","INPUTPINS_1_21","INPUTPINS_1_22","INPUTPINS_1_23","INPUTPINS_1_24","INPUTPINS_1_25");
+          
+            d2imp["CollisionX2CollisionX2_CE__INTUIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d1["Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6");
+          
+            d2imp["Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("1","1","1","1","1");
+          
+          d1["Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7");
+          
+            d2imp["Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_DUIM_SPECSIG"]=new Array("1","1","1","1","1","1");
+          
+          d2["OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8");
+          
+            d2imp["OpTxMcompar_ball_inY_cmp_eq0000_AEB_or00001Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV1755UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1");
+          
+          d1["OpTxFX_DC1082UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1082UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1082UIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["OpTxFX_DC1082UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxINV1076UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["OpTxINV1076UIM_SPECSIG"]=new Array("1","1","1","1");
+          
+          d2["BouncingObjectBouncingObject_D2UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19","INPUTPINS_1_20","INPUTPINS_1_21","INPUTPINS_1_22","INPUTPINS_1_23","INPUTPINS_1_24","INPUTPINS_1_25");
+          
+            d2imp["BouncingObjectBouncingObject_D2UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["OpTxMadd_paddle_addsub0003__and0000Madd_paddle_addsub0003__and0000_D2_INV1753UIM_SPECSIG"]=new Array("1","1");
+          
+          d2["OpTxFX_DC1101UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["OpTxFX_DC1101UIM_SPECSIG"]=new Array("1","1");
+          
+          d2["OpTxOpTxFX_DC1103_INV1746UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2");
+          
+            d2imp["OpTxOpTxFX_DC1103_INV1746UIM_SPECSIG"]=new Array("1","1");
+          
+          d2["OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10");
+          
+            d2imp["OpTxMcompar_paddle_cmp_le0000_G_B_000_01050Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV1756UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1");
+          
+          d2["SF1SF1_D2UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18");
+          
+            d2imp["SF1SF1_D2UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxOpTxFX_DC1118_INV1748UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9");
+          
+            d2imp["OpTxOpTxFX_DC1118_INV1748UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8");
+          
+            d2imp["OpTxMcompar_paddle_cmp_le0000_G_B_000_01057Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV1757UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1");
+          
+          d2["OpTxOpTxFX_DC1117_INV1747UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7");
+          
+            d2imp["OpTxOpTxFX_DC1117_INV1747UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1");
+          
+          d2["SF0SF0_D2UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16");
+          
+            d2imp["SF0SF0_D2UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxFX_DC1129UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19");
+          
+            d2imp["OpTxFX_DC1129UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxINV1079UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7");
+          
+            d2imp["OpTxINV1079UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1");
+          
+          d2["OpTxBouncingObject71BouncingObject71_D2_INV1752UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10");
+          
+            d2imp["OpTxBouncingObject71BouncingObject71_D2_INV1752UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxOpTxFX_DC1123_INV1749UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3");
+          
+            d2imp["OpTxOpTxFX_DC1123_INV1749UIM_SPECSIG"]=new Array("1","1","1");
+          
+          d2["Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["Madd_paddle_addsub0002__and0003Madd_paddle_addsub0002__and0003_D2UIM_SPECSIG"]=new Array("1");
+          
+          d1["OpTxFX_DC1121UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1121UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1121UIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5");
+          
+            d2imp["OpTxFX_DC1121UIM_SPECSIG"]=new Array("1","1","1","1");
+          
+          d1["Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["Mcompar_ball_inX_cmp_eq0000_or0002_xor0000Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_DUIM_SPECSIG"]=new Array("1");
+          
+          d1["Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3");
+          
+            d2imp["Mcompar_ball_inX_cmp_eq0001_or0004_xor0001Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_DUIM_SPECSIG"]=new Array("1","1");
+          
+          d2["OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8");
+          
+            d2imp["OpTxMcompar_ball_inX_cmp_eq0000_AEB_or00001Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV1754UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1");
+          
+          d2["OpTxOpTxINV1072_INV1750UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12");
+          
+            d2imp["OpTxOpTxINV1072_INV1750UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d1["ball_inX_addsub00008ball_inX_addsub0000<8>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["ball_inX_addsub00008ball_inX_addsub0000<8>_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["ball_inX_addsub00008ball_inX_addsub0000<8>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["ball_inX_addsub00008ball_inX_addsub0000<8>_DUIM_SPECSIG"]=new Array("1");
+          
+          d1["ball_inX_addsub00005ball_inX_addsub0000<5>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["ball_inX_addsub00005ball_inX_addsub0000<5>_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["ball_inX_addsub00005ball_inX_addsub0000<5>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["ball_inX_addsub00005ball_inX_addsub0000<5>_DUIM_SPECSIG"]=new Array("1");
+          
+          d1["add0000_addsub00004add0000_addsub0000<4>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["add0000_addsub00004add0000_addsub0000<4>_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["add0000_addsub00004add0000_addsub0000<4>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["add0000_addsub00004add0000_addsub0000<4>_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["CollisionY2CollisionY2_CE__INTUIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19","INPUTPINS_1_20","INPUTPINS_1_21","INPUTPINS_1_22","INPUTPINS_1_23","INPUTPINS_1_24");
+          
+            d2imp["CollisionY2CollisionY2_CE__INTUIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d1["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3");
+          
+            d2imp["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_DUIM_SPECSIG"]=new Array("1","1");
+          
+          d1["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3");
+          
+            d2imp["Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_DUIM_SPECSIG"]=new Array("1","1");
+          
+          d1["Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3");
+          
+            d2imp["Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_DUIM_SPECSIG"]=new Array("1","1");
+          
+          d2["OpTxINV1073UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4");
+          
+            d2imp["OpTxINV1073UIM_SPECSIG"]=new Array("1","1","1","1");
+          
+          d1["OpTxFX_DC1131UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1131UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1131UIM_SPECSIG"]=new Array("INPUTPINS_1_2","INPUTPINS_1_3");
+          
+            d2imp["OpTxFX_DC1131UIM_SPECSIG"]=new Array("1","1");
+          
+          d2["Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d2imp["Madd_ball_inY_addsub0000__and0002Madd_ball_inY_addsub0000__and0002_D2UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxOpTxINV1075_INV1751UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16");
+          
+            d2imp["OpTxOpTxINV1075_INV1751UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d1["add0001_addsub00004add0001_addsub0000<4>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["add0001_addsub00004add0001_addsub0000<4>_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["add0001_addsub00004add0001_addsub0000<4>_DUIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["add0001_addsub00004add0001_addsub0000<4>_DUIM_SPECSIG"]=new Array("1");
+          
+          d2["CollisionX1CollisionX1_CEUIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18");
+          
+            d2imp["CollisionX1CollisionX1_CEUIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d1["OpTxFX_DC1081UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1081UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1081UIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["OpTxFX_DC1081UIM_SPECSIG"]=new Array("1");
+          
+          d1["OpTxFX_DC1100UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1100UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1100UIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["OpTxFX_DC1100UIM_SPECSIG"]=new Array("1");
+          
+          d1["OpTxFX_DC1087UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1087UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1087UIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["OpTxFX_DC1087UIM_SPECSIG"]=new Array("1");
+          
+          d1["OpTxFX_DC1098UIM_SPECSIG"]=new Array("INPUTPINS_1_1");
+          
+            d1imp["OpTxFX_DC1098UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxFX_DC1098UIM_SPECSIG"]=new Array("INPUTPINS_1_2");
+          
+            d2imp["OpTxFX_DC1098UIM_SPECSIG"]=new Array("1");
+          
+          d2["OpTxINV1074UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8");
+          
+            d2imp["OpTxINV1074UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1");
+          
+          d2["CollisionY1CollisionY1_CEUIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18","INPUTPINS_1_19");
+          
+            d2imp["CollisionY1CollisionY1_CEUIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+          d2["OpTxINV1078UIM_SPECSIG"]=new Array("INPUTPINS_1_1","INPUTPINS_1_2","INPUTPINS_1_3","INPUTPINS_1_4","INPUTPINS_1_5","INPUTPINS_1_6","INPUTPINS_1_7","INPUTPINS_1_8","INPUTPINS_1_9","INPUTPINS_1_10","INPUTPINS_1_11","INPUTPINS_1_12","INPUTPINS_1_13","INPUTPINS_1_14","INPUTPINS_1_15","INPUTPINS_1_16","INPUTPINS_1_17","INPUTPINS_1_18");
+          
+            d2imp["OpTxINV1078UIM_SPECSIG"]=new Array("1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

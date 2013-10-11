@@ -1,0 +1,1862 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version P.68d                             Xilinx Inc.
+                                  No Fit Report
+Design Name: pong                                Date: 10-11-2013, 10:51AM
+Device Used: XC9572XL-5-PC44
+Fitting Status: Design Rule Checking Failed
+
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'pong.ise'.
+ERROR:Cpld:837 - Insufficient number of macrocells. The design needs at least
+   114 but only 72 left after allocating other resources.
+ERROR:Cpld:868 - Cannot fit the design into any of the specified devices with
+   the selected implementation options.
+*************************  Mapped Resource Summary  **************************
+
+No logic has been mapped.
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+0  /72  (  0%) 0   /360  (  0%) 0  /216 (  0%)   0  /72  (  0%) 0  /34  (  0%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1           0/18        0/54        0/90       0/ 9
+FB2           0/18        0/54        0/90       0/ 9
+FB3           0/18        0/54        0/90       0/ 9
+FB4           0/18        0/54        0/90       0/ 7
+             -----       -----       -----      -----    
+              0/72        0/216       0/360      0/34 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Global clock net(s) unused.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    2           0    |  I/O              :     0      28
+Output        :    5           0    |  GCK/IO           :     0       3
+Bidirectional :    0           0    |  GTS/IO           :     0       2
+GCK           :    1           0    |  GSR/IO           :     0       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total      8           0
+
+End of Mapped Resource Summary
+*************************  Summary of UnMapped Logic  ************************
+
+** 5 Outputs **
+
+Signal                                                                                             Total Total User
+Name                                                                                               Pts   Inps  Assignment
+vga_G                                                                                              2     4     
+vga_B                                                                                              2     4     
+vga_R                                                                                              4     6     
+vga_h_sync                                                                                         1     6     
+vga_v_sync                                                                                         1     9     
+
+** 109 Buried Nodes **
+
+Signal                                                                                             Total Total User
+Name                                                                                               Pts   Inps  Assignment
+$OpTx$$OpTx$FX_DC$1103_INV$1746                                                                    2     3     
+$OpTx$$OpTx$FX_DC$1117_INV$1747                                                                    7     5     
+$OpTx$$OpTx$FX_DC$1118_INV$1748                                                                    9     6     
+$OpTx$$OpTx$FX_DC$1123_INV$1749                                                                    3     8     
+$OpTx$$OpTx$INV$1072_INV$1750                                                                      12    6     
+$OpTx$$OpTx$INV$1075_INV$1751                                                                      16    8     
+$OpTx$BouncingObject71/BouncingObject71_D2_INV$1752                                                10    7     
+$OpTx$FX_DC$1081                                                                                   2     2     
+$OpTx$FX_DC$1082                                                                                   2     2     
+$OpTx$FX_DC$1087                                                                                   2     2     
+$OpTx$FX_DC$1098                                                                                   2     2     
+$OpTx$FX_DC$1100                                                                                   2     2     
+$OpTx$FX_DC$1101                                                                                   2     3     
+$OpTx$FX_DC$1121                                                                                   5     5     
+$OpTx$FX_DC$1129                                                                                   19    7     
+$OpTx$FX_DC$1131                                                                                   3     7     
+$OpTx$INV$1073                                                                                     4     4     
+$OpTx$INV$1074                                                                                     8     8     
+$OpTx$INV$1076                                                                                     4     4     
+$OpTx$INV$1078                                                                                     18    18    
+$OpTx$INV$1079                                                                                     7     6     
+$OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753                  2     5     
+$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754  8     8     
+$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755  8     8     
+$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756  10    7     
+$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757  8     8     
+BouncingObject/BouncingObject_D2                                                                   25    27    
+CollisionX1                                                                                        2     2     
+CollisionX1/CollisionX1_CE                                                                         18    22    
+CollisionX2                                                                                        2     2     
+CollisionX2/CollisionX2_CE__$INT                                                                   25    31    
+CollisionY1                                                                                        2     2     
+CollisionY1/CollisionY1_CE                                                                         19    19    
+CollisionY2                                                                                        2     2     
+CollisionY2/CollisionY2_CE__$INT                                                                   24    25    
+CounterX<0>                                                                                        0     0     
+CounterX<1>                                                                                        1     1     
+CounterX<2>                                                                                        1     2     
+CounterX<3>                                                                                        1     3     
+CounterX<4>                                                                                        1     4     
+
+Signal                                                                                             Total Total User
+Name                                                                                               Pts   Inps  Assignment
+CounterX<5>                                                                                        1     5     
+CounterX<6>                                                                                        1     6     
+CounterX<7>                                                                                        1     7     
+CounterX<8>                                                                                        2     10    
+CounterX<9>                                                                                        2     10    
+CounterY<0>                                                                                        1     10    
+CounterY<1>                                                                                        2     11    
+CounterY<2>                                                                                        2     12    
+CounterY<3>                                                                                        2     13    
+CounterY<4>                                                                                        2     14    
+CounterY<5>                                                                                        2     15    
+CounterY<6>                                                                                        2     16    
+CounterY<7>                                                                                        2     17    
+CounterY<8>                                                                                        2     18    
+Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2                             1     4     
+Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2                                 1     5     
+Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D      6     6     
+Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D      7     7     
+Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D      3     5     
+Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D      3     6     
+Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D      3     8     
+Mcompar_ball_inX_cmp_eq0000_or0002_xor0000/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D            2     2     
+Mcompar_ball_inX_cmp_eq0001_or0004_xor0001/Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D            3     7     
+PaddlePosition_0_0                                                                                 12    13    
+PaddlePosition_0_1                                                                                 10    13    
+PaddlePosition_0_2                                                                                 12    13    
+PaddlePosition_0_3                                                                                 14    13    
+PaddlePosition_0_4                                                                                 14    13    
+PaddlePosition_0_5                                                                                 16    13    
+PaddlePosition_0_6                                                                                 16    13    
+PaddlePosition_0_7                                                                                 16    13    
+PaddlePosition_0_8                                                                                 8     13    
+ResetCollision                                                                                     1     19    
+SF0/SF0_D2                                                                                         16    10    
+SF1/SF1_D2                                                                                         18    10    
+add0000_addsub0000<4>/add0000_addsub0000<4>_D                                                      2     2     
+add0001_addsub0000<4>/add0001_addsub0000<4>_D                                                      2     2     
+ballX<0>                                                                                           2     3     
+ballX<1>                                                                                           4     5     
+ballX<2>                                                                                           4     6     
+
+Signal                                                                                             Total Total User
+Name                                                                                               Pts   Inps  Assignment
+ballX<3>                                                                                           4     7     
+ballX<4>                                                                                           4     8     
+ballX<5>                                                                                           4     9     
+ballX<6>                                                                                           4     10    
+ballX<7>                                                                                           4     11    
+ballX<8>                                                                                           4     12    
+ballX<9>                                                                                           4     13    
+ballY_0_0                                                                                          2     3     
+ballY_0_1                                                                                          4     5     
+ballY_0_2                                                                                          4     6     
+ballY_0_3                                                                                          4     7     
+ballY_0_4                                                                                          4     8     
+ballY_0_5                                                                                          4     9     
+ballY_0_6                                                                                          4     10    
+ballY_0_7                                                                                          4     11    
+ballY_0_8                                                                                          4     12    
+ball_dirX                                                                                          2     4     
+ball_dirY                                                                                          2     4     
+ball_inX                                                                                           24    21    
+ball_inX_addsub0000<5>/ball_inX_addsub0000<5>_D                                                    2     2     
+ball_inX_addsub0000<8>/ball_inX_addsub0000<8>_D                                                    2     5     
+ball_inY                                                                                           21    22    
+inDisplayArea                                                                                      5     15    
+quadAr<0>                                                                                          1     1     
+quadAr<1>                                                                                          1     1     
+quadAr<2>                                                                                          1     1     
+quadBr<0>                                                                                          1     1     
+quadBr<1>                                                                                          1     1     
+quadBr<2>                                                                                          1     1     
+
+** 3 Inputs **
+
+Signal                                                                                             User
+Name                                                                                               Assignment
+clk                                                                                                
+quadA                                                                                              
+quadB                                                                                              
+
+*******************************  Equations  ********************************
+
+********** UnMapped Logic **********
+
+** Outputs **
+
+FDCPE_vga_B: FDCPE port map (vga_B,vga_B_D,clk,'0','0');
+vga_B_D <= ((inDisplayArea AND BouncingObject/BouncingObject_D2)
+	OR (ball_inY AND ball_inX AND inDisplayArea));
+
+FDCPE_vga_G: FDCPE port map (vga_G,vga_G_D,clk,'0','0');
+vga_G_D <= ((inDisplayArea AND BouncingObject/BouncingObject_D2)
+	OR (ball_inY AND ball_inX AND inDisplayArea));
+
+FDCPE_vga_R: FDCPE port map (vga_R,vga_R_D,clk,'0','0');
+vga_R_D <= ((inDisplayArea AND BouncingObject/BouncingObject_D2)
+	OR (ball_inY AND ball_inX AND inDisplayArea)
+	OR (NOT CounterY(3) AND CounterX(3) AND inDisplayArea)
+	OR (CounterY(3) AND NOT CounterX(3) AND inDisplayArea));
+
+FDCPE_vga_h_sync: FDCPE port map (vga_h_sync,vga_h_sync_D,clk,'0','0');
+vga_h_sync_D <= (CounterX(9) AND CounterX(4) AND NOT CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6));
+
+FDCPE_vga_v_sync: FDCPE port map (vga_v_sync,vga_v_sync_D,clk,'0','0');
+vga_v_sync_D <= (CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	NOT CounterY(3) AND CounterY(4) AND CounterY(8) AND NOT CounterY(0) AND 
+	NOT CounterY(1) AND CounterY(2));
+
+** Buried Nodes **
+
+
+$OpTx$$OpTx$FX_DC$1103_INV$1746 <= ((CounterX(9) AND CounterX(8))
+	OR (NOT PaddlePosition_0_8 AND CounterX(9)));
+
+
+$OpTx$$OpTx$FX_DC$1117_INV$1747 <= ((PaddlePosition_0_3 AND NOT PaddlePosition_0_5 AND 
+	CounterX(5))
+	OR (PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_5 AND 
+	CounterX(4) AND CounterX(5))
+	OR (NOT PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	CounterX(4) AND CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND CounterX(4))
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND CounterX(4)));
+
+
+$OpTx$$OpTx$FX_DC$1118_INV$1748 <= ((PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5)
+	OR (CounterX(4) AND CounterX(5) AND CounterX(3))
+	OR (NOT PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND CounterX(4) AND CounterX(3))
+	OR (PaddlePosition_0_4 AND CounterX(4) AND CounterX(5))
+	OR (PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	CounterX(4))
+	OR (PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	CounterX(5) AND CounterX(3))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND CounterX(3)));
+
+
+$OpTx$$OpTx$FX_DC$1123_INV$1749 <= ((PaddlePosition_0_8 AND NOT CounterX(9) AND NOT CounterX(8))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	NOT CounterX(9) AND NOT CounterX(8))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	PaddlePosition_0_8 AND NOT CounterX(9)));
+
+
+$OpTx$$OpTx$INV$1072_INV$1750 <= ((NOT ballX(4) AND ballX(6) AND ballX(7) AND CounterX(7) AND 
+	CounterX(6))
+	OR (NOT ballX(5) AND ballX(6) AND ballX(7) AND CounterX(7) AND 
+	CounterX(6))
+	OR (NOT ballX(4) AND ballX(6) AND NOT ballX(7) AND NOT CounterX(7) AND 
+	CounterX(6))
+	OR (NOT ballX(5) AND ballX(6) AND NOT ballX(7) AND NOT CounterX(7) AND 
+	CounterX(6))
+	OR (NOT ballX(4) AND NOT ballX(6) AND ballX(7) AND CounterX(7) AND 
+	NOT CounterX(6))
+	OR (NOT ballX(5) AND NOT ballX(6) AND ballX(7) AND CounterX(7) AND 
+	NOT CounterX(6))
+	OR (NOT ballX(4) AND NOT ballX(6) AND NOT ballX(7) AND NOT CounterX(7) AND 
+	NOT CounterX(6))
+	OR (NOT ballX(5) AND NOT ballX(6) AND NOT ballX(7) AND NOT CounterX(7) AND 
+	NOT CounterX(6))
+	OR (ballX(4) AND ballX(5) AND NOT ballX(6) AND ballX(7) AND 
+	CounterX(7) AND CounterX(6))
+	OR (ballX(4) AND ballX(5) AND NOT ballX(6) AND NOT ballX(7) AND 
+	NOT CounterX(7) AND CounterX(6))
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND NOT ballX(7) AND 
+	CounterX(7) AND NOT CounterX(6))
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	NOT CounterX(7) AND NOT CounterX(6)));
+
+
+$OpTx$$OpTx$INV$1075_INV$1751 <= ((CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_7)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND ballY_0_7)
+	OR (CounterY(5) AND CounterY(6) AND NOT CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND NOT ballY_0_7)
+	OR (CounterY(5) AND NOT CounterY(6) AND NOT CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_7)
+	OR (CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND ballY_0_7)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND ballY_0_7)
+	OR (CounterY(5) AND CounterY(6) AND NOT CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND NOT ballY_0_7)
+	OR (CounterY(5) AND NOT CounterY(6) AND NOT CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_7)
+	OR (NOT CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND ballY_0_7)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND ballY_0_7)
+	OR (NOT CounterY(5) AND CounterY(6) AND NOT CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND NOT ballY_0_7)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND NOT CounterY(7) AND 
+	CounterY(4) AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_7)
+	OR (NOT CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND ballY_0_7)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND NOT ballY_0_7)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND NOT CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_7)
+	OR (NOT CounterY(5) AND CounterY(6) AND NOT CounterY(7) AND 
+	NOT CounterY(4) AND ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_7));
+
+
+$OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 <= ((NOT CounterX(7) AND NOT CounterX(6))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_6)
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_4 AND 
+	PaddlePosition_0_6)
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_5 AND 
+	PaddlePosition_0_6)
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_6 AND 
+	NOT CounterX(6))
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_6 AND 
+	NOT CounterX(7))
+	OR (NOT PaddlePosition_0_7 AND PaddlePosition_0_6 AND 
+	NOT CounterX(7))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND NOT PaddlePosition_0_6)
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND NOT CounterX(7))
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	NOT CounterX(6)));
+
+
+$OpTx$FX_DC$1081 <= NOT (CounterX(2)
+	 XOR 
+$OpTx$FX_DC$1081 <= NOT (ballX(2));
+
+
+$OpTx$FX_DC$1082 <= NOT (CounterY(2)
+	 XOR 
+$OpTx$FX_DC$1082 <= NOT (ballY_0_2);
+
+
+$OpTx$FX_DC$1087 <= NOT (CounterX(9)
+	 XOR 
+$OpTx$FX_DC$1087 <= NOT (ballX(9));
+
+
+$OpTx$FX_DC$1098 <= NOT (CounterX(8)
+	 XOR 
+$OpTx$FX_DC$1098 <= NOT (ballX(8));
+
+
+$OpTx$FX_DC$1100 <= NOT (CounterX(3)
+	 XOR 
+$OpTx$FX_DC$1100 <= NOT (ballX(3));
+
+
+$OpTx$FX_DC$1101 <= ((CounterX(9))
+	OR (NOT PaddlePosition_0_8 AND CounterX(8)));
+
+
+$OpTx$FX_DC$1121 <= CounterY(6)
+	 XOR 
+$OpTx$FX_DC$1121 <= ((NOT ballY_0_4 AND NOT ballY_0_6)
+	OR (NOT ballY_0_5 AND NOT ballY_0_6)
+	OR (NOT ballY_0_6 AND NOT ballY_0_3)
+	OR (ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_3));
+
+
+$OpTx$FX_DC$1129 <= ((NOT PaddlePosition_0_5 AND CounterX(4) AND CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_5 AND 
+	CounterX(5))
+	OR (NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	CounterX(5))
+	OR (NOT PaddlePosition_0_5 AND CounterX(5) AND CounterX(3))
+	OR (NOT PaddlePosition_0_5 AND CounterX(5) AND 
+	NOT $OpTx$INV$1079)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	CounterX(4) AND CounterX(5))
+	OR (PaddlePosition_0_3 AND CounterX(4) AND CounterX(5) AND 
+	CounterX(3))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND CounterX(4))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND CounterX(3))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND CounterX(5))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND CounterX(4))
+	OR (NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	CounterX(4) AND CounterX(3))
+	OR (NOT PaddlePosition_0_4 AND CounterX(4) AND CounterX(5) AND 
+	NOT $OpTx$INV$1079)
+	OR (CounterX(4) AND CounterX(5) AND CounterX(3) AND 
+	NOT $OpTx$INV$1079)
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND NOT $OpTx$INV$1079)
+	OR (NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	CounterX(4) AND NOT $OpTx$INV$1079)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	CounterX(5) AND CounterX(3) AND NOT $OpTx$INV$1079)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_5 AND 
+	CounterX(4) AND CounterX(3) AND NOT $OpTx$INV$1079)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND CounterX(3) AND NOT $OpTx$INV$1079));
+
+
+$OpTx$FX_DC$1131 <= NOT ((ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	ballX(3))
+	 XOR 
+$OpTx$FX_DC$1131 <= NOT (((ballX(8) AND NOT CounterX(8))
+	OR (NOT ballX(8) AND CounterX(8))));
+
+
+$OpTx$INV$1073 <= ((NOT ballX(1) AND CounterX(1))
+	OR (ballX(1) AND NOT CounterX(1))
+	OR (NOT ballX(0) AND CounterX(0))
+	OR (ballX(0) AND NOT CounterX(0)));
+
+
+$OpTx$INV$1074 <= ((NOT ballX(5) AND CounterX(5))
+	OR (ballX(5) AND NOT CounterX(5))
+	OR (NOT ballX(7) AND CounterX(7))
+	OR (ballX(7) AND NOT CounterX(7))
+	OR (NOT ballX(6) AND CounterX(6))
+	OR (ballX(6) AND NOT CounterX(6))
+	OR (NOT ballX(4) AND CounterX(4))
+	OR (ballX(4) AND NOT CounterX(4)));
+
+
+$OpTx$INV$1076 <= ((CounterY(1) AND NOT ballY_0_1)
+	OR (NOT CounterY(1) AND ballY_0_1)
+	OR (CounterY(0) AND NOT ballY_0_0)
+	OR (NOT CounterY(0) AND ballY_0_0));
+
+
+$OpTx$INV$1078 <= ((CounterY(5) AND NOT ballY_0_5)
+	OR (NOT CounterY(5) AND ballY_0_5)
+	OR (CounterY(6) AND NOT ballY_0_6)
+	OR (NOT CounterY(6) AND ballY_0_6)
+	OR (CounterY(7) AND NOT ballY_0_7)
+	OR (NOT CounterY(7) AND ballY_0_7)
+	OR (NOT CounterY(8) AND ballY_0_8)
+	OR (CounterY(8) AND NOT ballY_0_8)
+	OR (CounterY(1) AND NOT ballY_0_1)
+	OR (NOT CounterY(1) AND ballY_0_1)
+	OR (CounterY(0) AND NOT ballY_0_0)
+	OR (NOT CounterY(0) AND ballY_0_0)
+	OR (NOT CounterY(2) AND ballY_0_2)
+	OR (CounterY(2) AND NOT ballY_0_2)
+	OR (NOT CounterY(4) AND ballY_0_4)
+	OR (CounterY(4) AND NOT ballY_0_4)
+	OR (NOT CounterY(3) AND ballY_0_3)
+	OR (CounterY(3) AND NOT ballY_0_3));
+
+
+$OpTx$INV$1079 <= ((PaddlePosition_0_2 AND NOT CounterX(2))
+	OR (PaddlePosition_0_1 AND PaddlePosition_0_2 AND 
+	NOT CounterX(1))
+	OR (PaddlePosition_0_1 AND NOT CounterX(1) AND NOT CounterX(2))
+	OR (PaddlePosition_0_1 AND PaddlePosition_0_2 AND 
+	PaddlePosition_0_0 AND NOT CounterX(0))
+	OR (PaddlePosition_0_1 AND PaddlePosition_0_0 AND 
+	NOT CounterX(2) AND NOT CounterX(0))
+	OR (PaddlePosition_0_2 AND PaddlePosition_0_0 AND 
+	NOT CounterX(1) AND NOT CounterX(0))
+	OR (PaddlePosition_0_0 AND NOT CounterX(1) AND NOT CounterX(2) AND 
+	NOT CounterX(0)));
+
+
+$OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 <= ((NOT PaddlePosition_0_7)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6));
+
+
+$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 <= ((NOT ballX(1) AND CounterX(1))
+	OR (ballX(1) AND NOT CounterX(1))
+	OR (NOT ballX(0) AND CounterX(0))
+	OR (ballX(0) AND NOT CounterX(0))
+	OR (ballX(2) AND NOT CounterX(2))
+	OR (NOT ballX(2) AND CounterX(2))
+	OR (ballX(3) AND NOT CounterX(3))
+	OR (NOT ballX(3) AND CounterX(3)));
+
+
+$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 <= ((CounterY(1) AND NOT ballY_0_1)
+	OR (NOT CounterY(1) AND ballY_0_1)
+	OR (CounterY(0) AND NOT ballY_0_0)
+	OR (NOT CounterY(0) AND ballY_0_0)
+	OR (NOT CounterY(2) AND ballY_0_2)
+	OR (CounterY(2) AND NOT ballY_0_2)
+	OR (NOT CounterY(3) AND ballY_0_3)
+	OR (CounterY(3) AND NOT ballY_0_3));
+
+
+$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756 <= ((CounterX(7) AND CounterX(6))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_6 AND 
+	CounterX(6))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_6 AND 
+	CounterX(7))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	NOT PaddlePosition_0_6)
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_6)
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6)
+	OR (NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_6 AND 
+	CounterX(7))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND PaddlePosition_0_6)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_7 AND 
+	NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND CounterX(7))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_7 AND 
+	NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND 
+	CounterX(6)));
+
+
+$OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757 <= ((NOT PaddlePosition_0_2 AND CounterX(2))
+	OR (PaddlePosition_0_3 AND CounterX(3))
+	OR (NOT PaddlePosition_0_1 AND NOT PaddlePosition_0_2 AND 
+	CounterX(1))
+	OR (NOT PaddlePosition_0_1 AND CounterX(1) AND CounterX(2))
+	OR (NOT PaddlePosition_0_1 AND NOT PaddlePosition_0_2 AND 
+	NOT PaddlePosition_0_0 AND CounterX(0))
+	OR (NOT PaddlePosition_0_1 AND NOT PaddlePosition_0_0 AND 
+	CounterX(2) AND CounterX(0))
+	OR (NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_0 AND 
+	CounterX(1) AND CounterX(0))
+	OR (NOT PaddlePosition_0_0 AND CounterX(1) AND CounterX(2) AND 
+	CounterX(0)));
+
+
+BouncingObject/BouncingObject_D2 <= ((NOT CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	CounterY(3) AND CounterY(4) AND CounterY(8))
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND NOT CounterY(7) AND 
+	NOT CounterY(3) AND NOT CounterY(4) AND NOT CounterY(8))
+	OR (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	NOT CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3))
+	OR (NOT CounterX(9) AND NOT CounterX(4) AND NOT CounterX(5) AND 
+	NOT CounterX(7) AND NOT CounterX(8) AND NOT CounterX(6) AND NOT CounterX(3))
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND 
+	NOT $OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 AND NOT $OpTx$FX_DC$1101 AND 
+	$OpTx$$OpTx$FX_DC$1103_INV$1746)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT $OpTx$FX_DC$1101 AND 
+	$OpTx$$OpTx$FX_DC$1103_INV$1746 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND $OpTx$$OpTx$FX_DC$1103_INV$1746 AND 
+	NOT SF1/SF1_D2 AND NOT $OpTx$$OpTx$FX_DC$1118_INV$1748)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND $OpTx$$OpTx$FX_DC$1103_INV$1746 AND 
+	NOT SF1/SF1_D2 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757 AND NOT $OpTx$$OpTx$FX_DC$1117_INV$1747)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND 
+	NOT $OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 AND NOT $OpTx$FX_DC$1101 AND NOT SF0/SF0_D2 AND $OpTx$FX_DC$1129)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT $OpTx$FX_DC$1101 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756 AND NOT SF0/SF0_D2 AND $OpTx$FX_DC$1129)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT SF1/SF1_D2 AND 
+	NOT $OpTx$$OpTx$FX_DC$1118_INV$1748 AND NOT SF0/SF0_D2 AND $OpTx$FX_DC$1129)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND 
+	NOT $OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 AND NOT $OpTx$FX_DC$1101 AND 
+	NOT $OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 AND NOT $OpTx$$OpTx$FX_DC$1123_INV$1749)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT $OpTx$FX_DC$1101 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756 AND 
+	NOT $OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 AND NOT $OpTx$$OpTx$FX_DC$1123_INV$1749)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT SF1/SF1_D2 AND 
+	NOT $OpTx$$OpTx$FX_DC$1118_INV$1748 AND 
+	NOT $OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 AND NOT $OpTx$$OpTx$FX_DC$1123_INV$1749)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND $OpTx$FX_DC$1101 AND NOT SF1/SF1_D2 AND 
+	NOT $OpTx$$OpTx$FX_DC$1118_INV$1748 AND 
+	NOT Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND PaddlePosition_0_8 AND NOT CounterX(9) AND 
+	NOT CounterX(8) AND $OpTx$$OpTx$FX_DC$1103_INV$1746)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND 
+	NOT $OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 AND NOT $OpTx$$OpTx$FX_DC$1103_INV$1746 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756 AND NOT SF0/SF0_D2 AND $OpTx$FX_DC$1129)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT SF1/SF1_D2 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757 AND NOT $OpTx$$OpTx$FX_DC$1117_INV$1747 AND NOT SF0/SF0_D2 AND 
+	$OpTx$FX_DC$1129)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND 
+	NOT $OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 AND NOT $OpTx$$OpTx$FX_DC$1103_INV$1746 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756 AND 
+	NOT $OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 AND NOT $OpTx$$OpTx$FX_DC$1123_INV$1749)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND NOT SF1/SF1_D2 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757 AND NOT $OpTx$$OpTx$FX_DC$1117_INV$1747 AND 
+	NOT $OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 AND NOT $OpTx$$OpTx$FX_DC$1123_INV$1749)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND 
+	NOT $OpTx$Madd_paddle_addsub0003__and0000/Madd_paddle_addsub0003__and0000_D2_INV$1753 AND $OpTx$FX_DC$1101 AND 
+	NOT $OpTx$$OpTx$FX_DC$1103_INV$1746 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01050/Mcompar_paddle_cmp_le0000_G_B_000_01050_D2_INV$1756 AND 
+	NOT Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND $OpTx$FX_DC$1101 AND NOT SF1/SF1_D2 AND 
+	NOT $OpTx$Mcompar_paddle_cmp_le0000_G_B_000_01057/Mcompar_paddle_cmp_le0000_G_B_000_01057_D2_INV$1757 AND NOT $OpTx$$OpTx$FX_DC$1117_INV$1747 AND 
+	NOT Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND PaddlePosition_0_8 AND NOT CounterX(9) AND 
+	NOT CounterX(8) AND NOT SF0/SF0_D2 AND $OpTx$FX_DC$1129)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND PaddlePosition_0_8 AND NOT CounterX(9) AND 
+	NOT CounterX(8) AND 
+	NOT $OpTx$BouncingObject71/BouncingObject71_D2_INV$1752 AND NOT $OpTx$$OpTx$FX_DC$1123_INV$1749)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(7) AND 
+	CounterY(4) AND CounterY(8) AND PaddlePosition_0_8 AND NOT CounterX(9) AND 
+	NOT CounterX(8) AND $OpTx$FX_DC$1101 AND 
+	NOT Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2));
+
+FDCPE_CollisionX1: FDCPE port map (CollisionX1,NOT ResetCollision,clk,'0','0',CollisionX1/CollisionX1_CE);
+
+
+CollisionX1/CollisionX1_CE <= ((ResetCollision)
+	OR (CounterY(5) AND CounterY(6) AND CounterY(4) AND 
+	NOT ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND CounterY(6) AND CounterY(4) AND 
+	ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND CounterY(6) AND NOT CounterY(4) AND 
+	NOT ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND CounterY(6) AND NOT CounterY(4) AND 
+	ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND CounterY(6) AND CounterY(4) AND 
+	NOT ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND CounterY(6) AND CounterY(4) AND 
+	ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND CounterY(6) AND NOT CounterY(4) AND 
+	NOT ballY_0_4 AND NOT ballY_0_5 AND ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND CounterY(6) AND NOT CounterY(4) AND 
+	ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(4) AND 
+	NOT ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND NOT CounterY(6) AND CounterY(4) AND 
+	ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND NOT CounterY(6) AND NOT CounterY(4) AND 
+	NOT ballY_0_4 AND ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (CounterY(5) AND NOT CounterY(6) AND NOT CounterY(4) AND 
+	ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND CounterY(4) AND 
+	NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND CounterY(4) AND 
+	ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND NOT CounterY(4) AND 
+	NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND NOT ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND NOT CounterY(4) AND 
+	ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND NOT ballY_0_7 AND ballY_0_3 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074)
+	OR (NOT CounterY(5) AND NOT CounterY(6) AND NOT CounterY(4) AND 
+	ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_3 AND NOT ballY_0_8 AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND $OpTx$FX_DC$1082 AND NOT $OpTx$INV$1076 AND 
+	BouncingObject/BouncingObject_D2 AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1081 AND 
+	$OpTx$FX_DC$1100 AND $OpTx$FX_DC$1087 AND $OpTx$FX_DC$1098 AND 
+	NOT $OpTx$INV$1074));
+
+FDCPE_CollisionX2: FDCPE port map (CollisionX2,NOT ResetCollision,clk,'0','0',NOT CollisionX2/CollisionX2_CE__$INT);
+
+
+CollisionX2/CollisionX2_CE__$INT <= ((NOT ResetCollision AND 
+	Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D)
+	OR (NOT ResetCollision AND 
+	Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D)
+	OR (NOT ResetCollision AND 
+	NOT $OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755)
+	OR (NOT ResetCollision AND NOT $OpTx$FX_DC$1082)
+	OR (NOT ResetCollision AND $OpTx$INV$1076)
+	OR (NOT ResetCollision AND NOT BouncingObject/BouncingObject_D2)
+	OR (NOT ResetCollision AND NOT $OpTx$FX_DC$1121)
+	OR (NOT ResetCollision AND 
+	NOT Mcompar_ball_inX_cmp_eq0000_or0002_xor0000/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D)
+	OR (NOT ResetCollision AND 
+	Mcompar_ball_inX_cmp_eq0001_or0004_xor0001/Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D)
+	OR (NOT ResetCollision AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754)
+	OR (NOT ResetCollision AND NOT $OpTx$$OpTx$INV$1072_INV$1750)
+	OR (NOT CounterX(8) AND NOT ResetCollision AND 
+	ball_inX_addsub0000(8)/ball_inX_addsub0000(8)_D)
+	OR (CounterX(8) AND NOT ResetCollision AND 
+	NOT ball_inX_addsub0000(8)/ball_inX_addsub0000(8)_D)
+	OR (NOT CounterX(5) AND NOT ResetCollision AND 
+	ball_inX_addsub0000(5)/ball_inX_addsub0000(5)_D)
+	OR (CounterX(5) AND NOT ResetCollision AND 
+	NOT ball_inX_addsub0000(5)/ball_inX_addsub0000(5)_D)
+	OR (CounterY(4) AND NOT ResetCollision AND 
+	NOT add0000_addsub0000(4)/add0000_addsub0000(4)_D)
+	OR (NOT CounterY(4) AND NOT ResetCollision AND 
+	add0000_addsub0000(4)/add0000_addsub0000(4)_D)
+	OR (NOT CounterY(5) AND NOT ballY_0_4 AND ballY_0_5 AND 
+	NOT ResetCollision)
+	OR (NOT CounterY(5) AND ballY_0_5 AND NOT ballY_0_3 AND 
+	NOT ResetCollision)
+	OR (CounterY(5) AND NOT ballY_0_4 AND NOT ballY_0_5 AND 
+	NOT ResetCollision)
+	OR (CounterY(5) AND NOT ballY_0_5 AND NOT ballY_0_3 AND 
+	NOT ResetCollision)
+	OR (CounterY(5) AND ballY_0_4 AND ballY_0_5 AND ballY_0_3 AND 
+	NOT ResetCollision)
+	OR (NOT CounterY(5) AND ballY_0_4 AND NOT ballY_0_5 AND ballY_0_3 AND 
+	NOT ResetCollision)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	ballX(8) AND ballX(9) AND NOT ResetCollision)
+	OR (ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_7 AND 
+	ballY_0_3 AND ballY_0_8 AND NOT ResetCollision));
+
+FDCPE_CollisionY1: FDCPE port map (CollisionY1,NOT ResetCollision,clk,'0','0',CollisionY1/CollisionY1_CE);
+
+
+CollisionY1/CollisionY1_CE <= ((ResetCollision)
+	OR (NOT ballX(4) AND ballX(5) AND ballX(6) AND ballX(3) AND 
+	CounterX(4) AND CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND NOT ballX(3) AND 
+	CounterX(4) AND CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND NOT ballX(5) AND ballX(6) AND ballX(3) AND 
+	CounterX(4) AND NOT CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND NOT ballX(5) AND ballX(6) AND NOT ballX(3) AND 
+	CounterX(4) AND NOT CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND ballX(5) AND NOT ballX(6) AND ballX(3) AND 
+	CounterX(4) AND CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND ballX(5) AND NOT ballX(6) AND NOT ballX(3) AND 
+	CounterX(4) AND CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND ballX(3) AND 
+	CounterX(4) AND NOT CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND NOT ballX(3) AND 
+	CounterX(4) AND NOT CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND ballX(5) AND ballX(6) AND NOT ballX(3) AND 
+	NOT CounterX(4) AND CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND NOT ballX(5) AND ballX(6) AND ballX(3) AND 
+	NOT CounterX(4) AND CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND NOT ballX(5) AND ballX(6) AND NOT ballX(3) AND 
+	NOT CounterX(4) AND NOT CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND ballX(5) AND NOT ballX(6) AND ballX(3) AND 
+	NOT CounterX(4) AND NOT CounterX(5) AND CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND ballX(5) AND NOT ballX(6) AND NOT ballX(3) AND 
+	NOT CounterX(4) AND CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND ballX(3) AND 
+	NOT CounterX(4) AND CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND NOT ballX(3) AND 
+	NOT CounterX(4) AND NOT CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND NOT ballX(7) AND 
+	ballX(3) AND NOT CounterX(4) AND NOT CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND NOT ballX(8) AND 
+	ballX(3) AND NOT CounterX(4) AND NOT CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND ballX(3) AND 
+	NOT ballX(9) AND NOT CounterX(4) AND NOT CounterX(5) AND NOT CounterX(6) AND 
+	BouncingObject/BouncingObject_D2 AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754 AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D AND 
+	NOT Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1131 AND 
+	$OpTx$FX_DC$1081 AND NOT $OpTx$INV$1078));
+
+FDCPE_CollisionY2: FDCPE port map (CollisionY2,NOT ResetCollision,clk,'0','0',NOT CollisionY2/CollisionY2_CE__$INT);
+
+
+CollisionY2/CollisionY2_CE__$INT <= ((NOT ResetCollision AND 
+	Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D)
+	OR (NOT ResetCollision AND 
+	Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D)
+	OR (NOT ResetCollision AND 
+	Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D)
+	OR (NOT ResetCollision AND 
+	NOT $OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754)
+	OR (NOT ResetCollision AND $OpTx$INV$1073)
+	OR (NOT ResetCollision AND NOT $OpTx$FX_DC$1131)
+	OR (NOT ResetCollision AND NOT BouncingObject/BouncingObject_D2)
+	OR (NOT ResetCollision AND 
+	$OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755)
+	OR (NOT ResetCollision AND NOT $OpTx$$OpTx$INV$1075_INV$1751)
+	OR (ballY_0_8 AND NOT ResetCollision AND 
+	Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2)
+	OR (NOT CounterY(8) AND NOT ResetCollision AND 
+	Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2)
+	OR (NOT CounterY(8) AND ballY_0_8 AND NOT ResetCollision)
+	OR (CounterX(4) AND NOT ResetCollision AND 
+	NOT add0001_addsub0000(4)/add0001_addsub0000(4)_D)
+	OR (NOT CounterX(4) AND NOT ResetCollision AND 
+	add0001_addsub0000(4)/add0001_addsub0000(4)_D)
+	OR (ballX(2) AND NOT ResetCollision AND NOT CounterX(2))
+	OR (NOT ballX(2) AND NOT ResetCollision AND CounterX(2))
+	OR (CounterY(8) AND NOT ballY_0_8 AND NOT ResetCollision AND 
+	NOT Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2)
+	OR (NOT ballX(4) AND ballX(5) AND NOT CounterX(5) AND 
+	NOT ResetCollision)
+	OR (ballX(5) AND NOT ballX(3) AND NOT CounterX(5) AND 
+	NOT ResetCollision)
+	OR (NOT ballX(4) AND NOT ballX(5) AND CounterX(5) AND 
+	NOT ResetCollision)
+	OR (NOT ballX(5) AND NOT ballX(3) AND CounterX(5) AND 
+	NOT ResetCollision)
+	OR (ballX(4) AND ballX(5) AND ballX(3) AND CounterX(5) AND 
+	NOT ResetCollision)
+	OR (ballX(4) AND NOT ballX(5) AND ballX(3) AND NOT CounterX(5) AND 
+	NOT ResetCollision)
+	OR (ballX(5) AND ballX(6) AND ballX(7) AND ballX(8) AND 
+	ballX(9) AND NOT CounterX(5) AND NOT ResetCollision));
+
+FTCPE_CounterX0: FTCPE port map (CounterX(0),'1',clk,'0','0');
+
+FTCPE_CounterX1: FTCPE port map (CounterX(1),CounterX(0),clk,'0','0');
+
+FTCPE_CounterX2: FTCPE port map (CounterX(2),CounterX_T(2),clk,'0','0');
+CounterX_T(2) <= (CounterX(1) AND CounterX(0));
+
+FTCPE_CounterX3: FTCPE port map (CounterX(3),CounterX_T(3),clk,'0','0');
+CounterX_T(3) <= (CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterX4: FTCPE port map (CounterX(4),CounterX_T(4),clk,'0','0');
+CounterX_T(4) <= (CounterX(3) AND CounterX(1) AND CounterX(2) AND 
+	CounterX(0));
+
+FTCPE_CounterX5: FTCPE port map (CounterX(5),CounterX_T(5),clk,'0','0');
+CounterX_T(5) <= (CounterX(4) AND CounterX(3) AND CounterX(1) AND 
+	CounterX(2) AND CounterX(0));
+
+FTCPE_CounterX6: FTCPE port map (CounterX(6),CounterX_T(6),clk,'0','0');
+CounterX_T(6) <= (CounterX(4) AND CounterX(5) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterX7: FTCPE port map (CounterX(7),CounterX_T(7),clk,'0','0');
+CounterX_T(7) <= (CounterX(4) AND CounterX(5) AND CounterX(6) AND 
+	CounterX(3) AND CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterX8: FTCPE port map (CounterX(8),CounterX_T(8),clk,'0','0');
+CounterX_T(8) <= ((NOT CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND CounterX(6) AND CounterX(3) AND CounterX(1) AND 
+	CounterX(2) AND CounterX(0))
+	OR (CounterX(4) AND CounterX(5) AND CounterX(7) AND 
+	CounterX(8) AND CounterX(6) AND CounterX(3) AND CounterX(1) AND 
+	CounterX(2) AND CounterX(0)));
+
+FTCPE_CounterX9: FTCPE port map (CounterX(9),CounterX_T(9),clk,'0','0');
+CounterX_T(9) <= ((CounterX(4) AND CounterX(5) AND CounterX(7) AND 
+	CounterX(8) AND CounterX(6) AND CounterX(3) AND CounterX(1) AND 
+	CounterX(2) AND CounterX(0))
+	OR (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND CounterX(6) AND CounterX(3) AND CounterX(1) AND 
+	CounterX(2) AND CounterX(0)));
+
+FTCPE_CounterY0: FTCPE port map (CounterY(0),'1',clk,'0','0',CounterY_CE(0));
+CounterY_CE(0) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY1: FTCPE port map (CounterY(1),CounterY(0),clk,'0','0',CounterY_CE(1));
+CounterY_CE(1) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY2: FTCPE port map (CounterY(2),CounterY_T(2),clk,'0','0',CounterY_CE(2));
+CounterY_T(2) <= (CounterY(0) AND CounterY(1));
+CounterY_CE(2) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY3: FTCPE port map (CounterY(3),CounterY_T(3),clk,'0','0',CounterY_CE(3));
+CounterY_T(3) <= (CounterY(0) AND CounterY(1) AND CounterY(2));
+CounterY_CE(3) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY4: FTCPE port map (CounterY(4),CounterY_T(4),clk,'0','0',CounterY_CE(4));
+CounterY_T(4) <= (CounterY(3) AND CounterY(0) AND CounterY(1) AND 
+	CounterY(2));
+CounterY_CE(4) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY5: FTCPE port map (CounterY(5),CounterY_T(5),clk,'0','0',CounterY_CE(5));
+CounterY_T(5) <= (CounterY(3) AND CounterY(4) AND CounterY(0) AND 
+	CounterY(1) AND CounterY(2));
+CounterY_CE(5) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY6: FTCPE port map (CounterY(6),CounterY_T(6),clk,'0','0',CounterY_CE(6));
+CounterY_T(6) <= (CounterY(5) AND CounterY(3) AND CounterY(4) AND 
+	CounterY(0) AND CounterY(1) AND CounterY(2));
+CounterY_CE(6) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY7: FTCPE port map (CounterY(7),CounterY_T(7),clk,'0','0',CounterY_CE(7));
+CounterY_T(7) <= (CounterY(5) AND CounterY(6) AND CounterY(3) AND 
+	CounterY(4) AND CounterY(0) AND CounterY(1) AND CounterY(2));
+CounterY_CE(7) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+FTCPE_CounterY8: FTCPE port map (CounterY(8),CounterY_T(8),clk,'0','0',CounterY_CE(8));
+CounterY_T(8) <= (CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	CounterY(3) AND CounterY(4) AND CounterY(0) AND CounterY(1) AND 
+	CounterY(2));
+CounterY_CE(8) <= (CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0));
+
+
+Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2 <= (ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_7);
+
+
+Madd_paddle_addsub0002__and0003/Madd_paddle_addsub0002__and0003_D2 <= (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6);
+
+
+Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D <= NOT (CounterY(7)
+	 XOR 
+Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionX1_cmp_eq0000_or0003_xor0001_D <= NOT (((NOT ballY_0_4 AND NOT ballY_0_7)
+	OR (NOT ballY_0_5 AND NOT ballY_0_7)
+	OR (NOT ballY_0_6 AND NOT ballY_0_7)
+	OR (NOT ballY_0_7 AND NOT ballY_0_3)
+	OR (ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_7 AND 
+	ballY_0_3)));
+
+
+Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D <= NOT (CounterY(8)
+	 XOR 
+Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000/Mcompar_CollisionX1_cmp_eq0000_or0004_xor0000_D <= NOT (((NOT ballY_0_4 AND NOT ballY_0_8)
+	OR (NOT ballY_0_5 AND NOT ballY_0_8)
+	OR (NOT ballY_0_6 AND NOT ballY_0_8)
+	OR (NOT ballY_0_7 AND NOT ballY_0_8)
+	OR (NOT ballY_0_3 AND NOT ballY_0_8)
+	OR (ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND ballY_0_7 AND 
+	ballY_0_3 AND ballY_0_8)));
+
+
+Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D <= (ballX(4) AND ballX(5) AND ballX(3))
+	 XOR 
+Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0000_D <= ((ballX(6) AND NOT CounterX(6))
+	OR (NOT ballX(6) AND CounterX(6)));
+
+
+Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D <= (ballX(4) AND ballX(5) AND ballX(6) AND ballX(3))
+	 XOR 
+Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0003_xor0001_D <= ((ballX(7) AND NOT CounterX(7))
+	OR (NOT ballX(7) AND CounterX(7)));
+
+
+Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D <= (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	ballX(8) AND ballX(3))
+	 XOR 
+Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001/Mcompar_CollisionY1_cmp_eq0000_or0004_xor0001_D <= ((ballX(9) AND NOT CounterX(9))
+	OR (NOT ballX(9) AND CounterX(9)));
+
+
+Mcompar_ball_inX_cmp_eq0000_or0002_xor0000/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D <= ballX(4)
+	 XOR 
+Mcompar_ball_inX_cmp_eq0000_or0002_xor0000/Mcompar_ball_inX_cmp_eq0000_or0002_xor0000_D <= CounterX(4);
+
+
+Mcompar_ball_inX_cmp_eq0001_or0004_xor0001/Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D <= (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	ballX(8))
+	 XOR 
+Mcompar_ball_inX_cmp_eq0001_or0004_xor0001/Mcompar_ball_inX_cmp_eq0001_or0004_xor0001_D <= ((ballX(9) AND NOT CounterX(9))
+	OR (NOT ballX(9) AND CounterX(9)));
+
+FTCPE_PaddlePosition_0_0: FTCPE port map (PaddlePosition_0_0,PaddlePosition_0_0_T,clk,'0','0');
+PaddlePosition_0_0_T <= ((quadAr(1) AND quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (NOT quadAr(1) AND quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (NOT quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (NOT quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2))
+	OR (quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (NOT quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8 AND quadBr(1) AND quadAr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	PaddlePosition_0_8 AND NOT quadBr(1) AND quadAr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	PaddlePosition_0_8 AND quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8 AND NOT quadBr(1) AND NOT quadAr(2)));
+
+FTCPE_PaddlePosition_0_1: FTCPE port map (PaddlePosition_0_1,PaddlePosition_0_1_T,clk,'0','0');
+PaddlePosition_0_1_T <= ((NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8)
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	PaddlePosition_0_8)
+	OR (PaddlePosition_0_0 AND NOT quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadBr(1) AND quadAr(2))
+	OR (PaddlePosition_0_0 AND quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND NOT quadAr(1) AND quadBr(2))
+	OR (NOT PaddlePosition_0_0 AND quadAr(1) AND quadBr(2)));
+
+FTCPE_PaddlePosition_0_2: FTCPE port map (PaddlePosition_0_2,PaddlePosition_0_2_T,clk,'0','0');
+PaddlePosition_0_2_T <= ((NOT PaddlePosition_0_1 AND PaddlePosition_0_0)
+	OR (PaddlePosition_0_1 AND NOT PaddlePosition_0_0)
+	OR (NOT PaddlePosition_0_1 AND quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_1 AND NOT quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_1 AND quadAr(1) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_1 AND NOT quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_1 AND quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_1 AND NOT quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_1 AND quadBr(1) AND NOT quadAr(2))
+	OR (PaddlePosition_0_1 AND NOT quadBr(1) AND NOT quadAr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_8)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_8));
+
+FTCPE_PaddlePosition_0_3: FTCPE port map (PaddlePosition_0_3,PaddlePosition_0_3_T,clk,'0','0');
+PaddlePosition_0_3_T <= ((NOT PaddlePosition_0_1 AND PaddlePosition_0_2)
+	OR (PaddlePosition_0_1 AND NOT PaddlePosition_0_2)
+	OR (NOT PaddlePosition_0_1 AND PaddlePosition_0_0)
+	OR (PaddlePosition_0_1 AND NOT PaddlePosition_0_0)
+	OR (NOT PaddlePosition_0_1 AND quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_1 AND NOT quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_1 AND quadAr(1) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_1 AND NOT quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_1 AND quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_1 AND NOT quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_1 AND quadBr(1) AND NOT quadAr(2))
+	OR (PaddlePosition_0_1 AND NOT quadBr(1) AND NOT quadAr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_6 AND PaddlePosition_0_8)
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_8));
+
+FTCPE_PaddlePosition_0_4: FTCPE port map (PaddlePosition_0_4,PaddlePosition_0_4_T,clk,'0','0');
+PaddlePosition_0_4_T <= ((NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8)
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	PaddlePosition_0_8)
+	OR (PaddlePosition_0_0 AND NOT quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadBr(1) AND quadAr(2))
+	OR (PaddlePosition_0_0 AND quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND NOT quadAr(1) AND quadBr(2))
+	OR (NOT PaddlePosition_0_0 AND quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_1 AND NOT PaddlePosition_0_2)
+	OR (PaddlePosition_0_2 AND NOT PaddlePosition_0_0)
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_1)
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_0));
+
+FTCPE_PaddlePosition_0_5: FTCPE port map (PaddlePosition_0_5,PaddlePosition_0_5_T,clk,'0','0');
+PaddlePosition_0_5_T <= ((NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND NOT PaddlePosition_0_8)
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_6 AND PaddlePosition_0_0 AND PaddlePosition_0_8)
+	OR (PaddlePosition_0_0 AND NOT quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadBr(1) AND quadAr(2))
+	OR (PaddlePosition_0_0 AND quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND NOT quadAr(1) AND quadBr(2))
+	OR (NOT PaddlePosition_0_0 AND quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_1 AND NOT PaddlePosition_0_2)
+	OR (PaddlePosition_0_2 AND NOT PaddlePosition_0_0)
+	OR (NOT PaddlePosition_0_4 AND PaddlePosition_0_0)
+	OR (PaddlePosition_0_4 AND NOT PaddlePosition_0_0)
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_1)
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_0));
+
+FTCPE_PaddlePosition_0_6: FTCPE port map (PaddlePosition_0_6,PaddlePosition_0_6_T,clk,'0','0');
+PaddlePosition_0_6_T <= ((NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_6 AND 
+	NOT PaddlePosition_0_0 AND NOT PaddlePosition_0_8)
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_6 AND 
+	PaddlePosition_0_0 AND PaddlePosition_0_8)
+	OR (NOT PaddlePosition_0_0 AND quadBr(1) AND NOT quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadBr(1) AND quadAr(2))
+	OR (NOT PaddlePosition_0_0 AND NOT quadAr(1) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_0 AND quadAr(1) AND quadBr(2))
+	OR (PaddlePosition_0_0 AND NOT quadBr(1) AND NOT quadAr(2))
+	OR (PaddlePosition_0_0 AND quadBr(1) AND quadAr(2))
+	OR (PaddlePosition_0_0 AND quadAr(1) AND NOT quadBr(2))
+	OR (PaddlePosition_0_0 AND NOT quadAr(1) AND quadBr(2))
+	OR (NOT PaddlePosition_0_4 AND PaddlePosition_0_0)
+	OR (PaddlePosition_0_2 AND NOT PaddlePosition_0_5)
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_4)
+	OR (PaddlePosition_0_1 AND NOT PaddlePosition_0_2)
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_1)
+	OR (PaddlePosition_0_5 AND NOT PaddlePosition_0_0));
+
+FTCPE_PaddlePosition_0_7: FTCPE port map (PaddlePosition_0_7,PaddlePosition_0_7_T,clk,'0','0');
+PaddlePosition_0_7_T <= ((NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	NOT quadAr(1) AND quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND PaddlePosition_0_8 AND 
+	NOT quadAr(1) AND quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	quadAr(1) AND quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND PaddlePosition_0_8 AND 
+	quadAr(1) AND quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_2 AND PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_6 AND PaddlePosition_0_0 AND NOT PaddlePosition_0_8 AND 
+	quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	NOT quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_2 AND PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_6 AND PaddlePosition_0_0 AND NOT PaddlePosition_0_8 AND 
+	NOT quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_2 AND PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_6 AND PaddlePosition_0_0 AND NOT PaddlePosition_0_8 AND 
+	quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	NOT quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_2 AND PaddlePosition_0_4 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_6 AND PaddlePosition_0_0 AND NOT PaddlePosition_0_8 AND 
+	NOT quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	NOT quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND PaddlePosition_0_8 AND 
+	NOT quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND 
+	NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND PaddlePosition_0_8 AND 
+	quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2)));
+
+FTCPE_PaddlePosition_0_8: FTCPE port map (PaddlePosition_0_8,PaddlePosition_0_8_T,clk,'0','0');
+PaddlePosition_0_8_T <= ((NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	PaddlePosition_0_8 AND NOT quadAr(1) AND quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	PaddlePosition_0_8 AND quadAr(1) AND quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8 AND quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8 AND NOT quadAr(1) AND NOT quadBr(1) AND quadAr(2) AND NOT quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8 AND quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_1 AND 
+	PaddlePosition_0_7 AND PaddlePosition_0_2 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND PaddlePosition_0_6 AND PaddlePosition_0_0 AND 
+	NOT PaddlePosition_0_8 AND NOT quadAr(1) AND quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	PaddlePosition_0_8 AND NOT quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND quadBr(2))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_1 AND 
+	NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_2 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_0 AND 
+	PaddlePosition_0_8 AND quadAr(1) AND NOT quadBr(1) AND NOT quadAr(2) AND NOT quadBr(2)));
+
+FDCPE_ResetCollision: FDCPE port map (ResetCollision,ResetCollision_D,clk,'0','0');
+ResetCollision_D <= (CounterY(5) AND CounterY(6) AND CounterY(7) AND 
+	NOT CounterY(3) AND CounterY(4) AND CounterY(8) AND NOT CounterY(0) AND 
+	NOT CounterY(1) AND CounterY(2) AND NOT CounterX(9) AND NOT CounterX(4) AND 
+	NOT CounterX(5) AND NOT CounterX(7) AND NOT CounterX(8) AND NOT CounterX(6) AND 
+	NOT CounterX(3) AND NOT CounterX(1) AND NOT CounterX(2) AND NOT CounterX(0));
+
+
+SF0/SF0_D2 <= ((NOT PaddlePosition_0_7 AND PaddlePosition_0_8 AND 
+	NOT CounterX(8))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_8 AND 
+	NOT CounterX(8))
+	OR (NOT PaddlePosition_0_4 AND PaddlePosition_0_8 AND 
+	NOT CounterX(8))
+	OR (NOT PaddlePosition_0_5 AND PaddlePosition_0_8 AND 
+	NOT CounterX(8))
+	OR (NOT PaddlePosition_0_6 AND PaddlePosition_0_8 AND 
+	NOT CounterX(8))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	NOT CounterX(7))
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_4 AND 
+	NOT CounterX(7))
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_5 AND 
+	NOT CounterX(7))
+	OR (PaddlePosition_0_7 AND NOT PaddlePosition_0_6 AND 
+	NOT CounterX(7))
+	OR (NOT PaddlePosition_0_3 AND PaddlePosition_0_6 AND 
+	NOT CounterX(6))
+	OR (NOT PaddlePosition_0_4 AND PaddlePosition_0_6 AND 
+	NOT CounterX(6))
+	OR (NOT PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	NOT CounterX(6))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT CounterX(6))
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	NOT CounterX(7))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	PaddlePosition_0_8 AND NOT CounterX(9))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_4 AND PaddlePosition_0_5 AND PaddlePosition_0_6 AND 
+	NOT PaddlePosition_0_8 AND NOT CounterX(8)));
+
+
+SF1/SF1_D2 <= ((NOT PaddlePosition_0_7 AND CounterX(9))
+	OR (NOT PaddlePosition_0_8 AND CounterX(9))
+	OR (NOT PaddlePosition_0_7 AND NOT PaddlePosition_0_8 AND 
+	CounterX(8))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	CounterX(7))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_4 AND 
+	CounterX(7))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_5 AND 
+	CounterX(7))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_6 AND 
+	CounterX(7))
+	OR (PaddlePosition_0_3 AND NOT PaddlePosition_0_6 AND 
+	CounterX(6))
+	OR (PaddlePosition_0_4 AND NOT PaddlePosition_0_6 AND 
+	CounterX(6))
+	OR (PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND 
+	CounterX(6))
+	OR (PaddlePosition_0_3 AND PaddlePosition_0_7 AND 
+	PaddlePosition_0_8 AND CounterX(8))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_4 AND 
+	PaddlePosition_0_8 AND CounterX(8))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_5 AND 
+	PaddlePosition_0_8 AND CounterX(8))
+	OR (PaddlePosition_0_7 AND PaddlePosition_0_6 AND 
+	PaddlePosition_0_8 AND CounterX(8))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND CounterX(9))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND PaddlePosition_0_6 AND CounterX(6))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_4 AND 
+	NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND NOT PaddlePosition_0_8 AND 
+	CounterX(8))
+	OR (NOT PaddlePosition_0_3 AND NOT PaddlePosition_0_7 AND 
+	NOT PaddlePosition_0_4 AND NOT PaddlePosition_0_5 AND NOT PaddlePosition_0_6 AND 
+	CounterX(7)));
+
+
+add0000_addsub0000(4)/add0000_addsub0000(4)_D <= ballY_0_4
+	 XOR 
+add0000_addsub0000(4)/add0000_addsub0000(4)_D <= ballY_0_3;
+
+
+add0001_addsub0000(4)/add0001_addsub0000(4)_D <= ballX(4)
+	 XOR 
+add0001_addsub0000(4)/add0001_addsub0000(4)_D <= ballX(3);
+
+FTCPE_ballX0: FTCPE port map (ballX(0),ballX_T(0),clk,'0','0');
+ballX_T(0) <= ((NOT CollisionX1 AND ResetCollision)
+	OR (NOT CollisionX2 AND ResetCollision));
+
+FTCPE_ballX1: FTCPE port map (ballX(1),ballX_T(1),clk,'0','0');
+ballX_T(1) <= ((NOT ball_dirX AND NOT ballX(0))
+	OR (NOT ResetCollision)
+	OR (CollisionX2 AND CollisionX1)
+	OR (ball_dirX AND ballX(0)));
+
+FTCPE_ballX2: FTCPE port map (ballX(2),ballX_T(2),clk,'0','0');
+ballX_T(2) <= ((ball_dirX AND NOT ballX(0) AND NOT ballX(1) AND NOT CollisionX1 AND 
+	ResetCollision)
+	OR (NOT ball_dirX AND ballX(0) AND ballX(1) AND NOT CollisionX1 AND 
+	ResetCollision)
+	OR (ball_dirX AND NOT ballX(0) AND NOT ballX(1) AND NOT CollisionX2 AND 
+	ResetCollision)
+	OR (NOT ball_dirX AND ballX(0) AND ballX(1) AND NOT CollisionX2 AND 
+	ResetCollision));
+
+FTCPE_ballX3: FTCPE port map (ballX(3),ballX_T(3),clk,'0','0');
+ballX_T(3) <= ((NOT ball_dirX AND ballX(0) AND ballX(1) AND ballX(2) AND 
+	NOT CollisionX1 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND 
+	NOT CollisionX1 AND ResetCollision)
+	OR (NOT ball_dirX AND ballX(0) AND ballX(1) AND ballX(2) AND 
+	NOT CollisionX2 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND 
+	NOT CollisionX2 AND ResetCollision));
+
+FTCPE_ballX4: FTCPE port map (ballX(4),ballX_T(4),clk,'0','0');
+ballX_T(4) <= ((NOT ball_dirX AND ballX(3) AND ballX(0) AND ballX(1) AND 
+	ballX(2) AND NOT CollisionX1 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND 
+	NOT ballX(2) AND NOT CollisionX1 AND ResetCollision)
+	OR (NOT ball_dirX AND ballX(3) AND ballX(0) AND ballX(1) AND 
+	ballX(2) AND NOT CollisionX2 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND 
+	NOT ballX(2) AND NOT CollisionX2 AND ResetCollision));
+
+FTCPE_ballX5: FTCPE port map (ballX(5),ballX_T(5),clk,'0','0');
+ballX_T(5) <= ((NOT ball_dirX AND ballX(4) AND ballX(3) AND ballX(0) AND 
+	ballX(1) AND ballX(2) AND NOT CollisionX1 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(3) AND NOT ballX(0) AND 
+	NOT ballX(1) AND NOT ballX(2) AND NOT CollisionX1 AND ResetCollision)
+	OR (NOT ball_dirX AND ballX(4) AND ballX(3) AND ballX(0) AND 
+	ballX(1) AND ballX(2) AND NOT CollisionX2 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(3) AND NOT ballX(0) AND 
+	NOT ballX(1) AND NOT ballX(2) AND NOT CollisionX2 AND ResetCollision));
+
+FTCPE_ballX6: FTCPE port map (ballX(6),ballX_T(6),clk,'0','0');
+ballX_T(6) <= ((NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(3) AND 
+	ballX(0) AND ballX(1) AND ballX(2) AND NOT CollisionX1 AND 
+	ResetCollision)
+	OR (NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(3) AND 
+	ballX(0) AND ballX(1) AND ballX(2) AND NOT CollisionX2 AND 
+	ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(3) AND 
+	NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND NOT CollisionX1 AND 
+	ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(3) AND 
+	NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND NOT CollisionX2 AND 
+	ResetCollision));
+
+FTCPE_ballX7: FTCPE port map (ballX(7),ballX_T(7),clk,'0','0');
+ballX_T(7) <= ((NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(6) AND 
+	ballX(3) AND ballX(0) AND ballX(1) AND ballX(2) AND NOT CollisionX1 AND 
+	ResetCollision)
+	OR (NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(6) AND 
+	ballX(3) AND ballX(0) AND ballX(1) AND ballX(2) AND NOT CollisionX2 AND 
+	ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND 
+	NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND NOT CollisionX1 AND 
+	ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND 
+	NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND NOT CollisionX2 AND 
+	ResetCollision));
+
+FTCPE_ballX8: FTCPE port map (ballX(8),ballX_T(8),clk,'0','0');
+ballX_T(8) <= ((NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(6) AND 
+	ballX(7) AND ballX(3) AND ballX(0) AND ballX(1) AND ballX(2) AND 
+	NOT CollisionX1 AND ResetCollision)
+	OR (NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(6) AND 
+	ballX(7) AND ballX(3) AND ballX(0) AND ballX(1) AND ballX(2) AND 
+	NOT CollisionX2 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND 
+	NOT ballX(7) AND NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND 
+	NOT CollisionX1 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND 
+	NOT ballX(7) AND NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND NOT ballX(2) AND 
+	NOT CollisionX2 AND ResetCollision));
+
+FTCPE_ballX9: FTCPE port map (ballX(9),ballX_T(9),clk,'0','0');
+ballX_T(9) <= ((NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(6) AND 
+	ballX(7) AND ballX(8) AND ballX(3) AND ballX(0) AND ballX(1) AND 
+	ballX(2) AND NOT CollisionX1 AND ResetCollision)
+	OR (NOT ball_dirX AND ballX(4) AND ballX(5) AND ballX(6) AND 
+	ballX(7) AND ballX(8) AND ballX(3) AND ballX(0) AND ballX(1) AND 
+	ballX(2) AND NOT CollisionX2 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND 
+	NOT ballX(7) AND NOT ballX(8) AND NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND 
+	NOT ballX(2) AND NOT CollisionX1 AND ResetCollision)
+	OR (ball_dirX AND NOT ballX(4) AND NOT ballX(5) AND NOT ballX(6) AND 
+	NOT ballX(7) AND NOT ballX(8) AND NOT ballX(3) AND NOT ballX(0) AND NOT ballX(1) AND 
+	NOT ballX(2) AND NOT CollisionX2 AND ResetCollision));
+
+FTCPE_ballY_0_0: FTCPE port map (ballY_0_0,ballY_0_0_T,clk,'0','0');
+ballY_0_0_T <= ((NOT CollisionY1 AND ResetCollision)
+	OR (NOT CollisionY2 AND ResetCollision));
+
+FTCPE_ballY_0_1: FTCPE port map (ballY_0_1,ballY_0_1_T,clk,'0','0');
+ballY_0_1_T <= ((NOT ball_dirY AND NOT ballY_0_0)
+	OR (NOT ResetCollision)
+	OR (CollisionY2 AND CollisionY1)
+	OR (ball_dirY AND ballY_0_0));
+
+FTCPE_ballY_0_2: FTCPE port map (ballY_0_2,ballY_0_2_T,clk,'0','0');
+ballY_0_2_T <= ((ball_dirY AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT CollisionY1 AND 
+	ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_0 AND ballY_0_1 AND NOT CollisionY1 AND 
+	ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT CollisionY2 AND 
+	ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_0 AND ballY_0_1 AND NOT CollisionY2 AND 
+	ResetCollision));
+
+FTCPE_ballY_0_3: FTCPE port map (ballY_0_3,ballY_0_3_T,clk,'0','0');
+ballY_0_3_T <= ((NOT ball_dirY AND ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND 
+	NOT CollisionY1 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND 
+	NOT CollisionY1 AND ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND 
+	NOT CollisionY2 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND 
+	NOT CollisionY2 AND ResetCollision));
+
+FTCPE_ballY_0_4: FTCPE port map (ballY_0_4,ballY_0_4_T,clk,'0','0');
+ballY_0_4_T <= ((NOT ball_dirY AND ballY_0_3 AND ballY_0_0 AND ballY_0_1 AND 
+	ballY_0_2 AND NOT CollisionY1 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_3 AND NOT ballY_0_0 AND NOT ballY_0_1 AND 
+	NOT ballY_0_2 AND NOT CollisionY1 AND ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_3 AND ballY_0_0 AND ballY_0_1 AND 
+	ballY_0_2 AND NOT CollisionY2 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_3 AND NOT ballY_0_0 AND NOT ballY_0_1 AND 
+	NOT ballY_0_2 AND NOT CollisionY2 AND ResetCollision));
+
+FTCPE_ballY_0_5: FTCPE port map (ballY_0_5,ballY_0_5_T,clk,'0','0');
+ballY_0_5_T <= ((NOT ball_dirY AND ballY_0_4 AND ballY_0_3 AND ballY_0_0 AND 
+	ballY_0_1 AND ballY_0_2 AND NOT CollisionY1 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_3 AND NOT ballY_0_0 AND 
+	NOT ballY_0_1 AND NOT ballY_0_2 AND NOT CollisionY1 AND ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_4 AND ballY_0_3 AND ballY_0_0 AND 
+	ballY_0_1 AND ballY_0_2 AND NOT CollisionY2 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_3 AND NOT ballY_0_0 AND 
+	NOT ballY_0_1 AND NOT ballY_0_2 AND NOT CollisionY2 AND ResetCollision));
+
+FTCPE_ballY_0_6: FTCPE port map (ballY_0_6,ballY_0_6_T,clk,'0','0');
+ballY_0_6_T <= ((NOT ball_dirY AND ballY_0_4 AND ballY_0_5 AND ballY_0_3 AND 
+	ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND NOT CollisionY1 AND 
+	ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_4 AND ballY_0_5 AND ballY_0_3 AND 
+	ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND NOT CollisionY2 AND 
+	ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_3 AND 
+	NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND NOT CollisionY1 AND 
+	ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_3 AND 
+	NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND NOT CollisionY2 AND 
+	ResetCollision));
+
+FTCPE_ballY_0_7: FTCPE port map (ballY_0_7,ballY_0_7_T,clk,'0','0');
+ballY_0_7_T <= ((NOT ball_dirY AND ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND 
+	ballY_0_3 AND ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND NOT CollisionY1 AND 
+	ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND 
+	ballY_0_3 AND ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND NOT CollisionY2 AND 
+	ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND 
+	NOT ballY_0_3 AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND NOT CollisionY1 AND 
+	ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND 
+	NOT ballY_0_3 AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND NOT CollisionY2 AND 
+	ResetCollision));
+
+FTCPE_ballY_0_8: FTCPE port map (ballY_0_8,ballY_0_8_T,clk,'0','0');
+ballY_0_8_T <= ((NOT ball_dirY AND ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND 
+	ballY_0_7 AND ballY_0_3 AND ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND 
+	NOT CollisionY1 AND ResetCollision)
+	OR (NOT ball_dirY AND ballY_0_4 AND ballY_0_5 AND ballY_0_6 AND 
+	ballY_0_7 AND ballY_0_3 AND ballY_0_0 AND ballY_0_1 AND ballY_0_2 AND 
+	NOT CollisionY2 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND 
+	NOT ballY_0_7 AND NOT ballY_0_3 AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND 
+	NOT CollisionY1 AND ResetCollision)
+	OR (ball_dirY AND NOT ballY_0_4 AND NOT ballY_0_5 AND NOT ballY_0_6 AND 
+	NOT ballY_0_7 AND NOT ballY_0_3 AND NOT ballY_0_0 AND NOT ballY_0_1 AND NOT ballY_0_2 AND 
+	NOT CollisionY2 AND ResetCollision));
+
+FTCPE_ball_dirX: FTCPE port map (ball_dirX,ball_dirX_T,clk,'0','0');
+ball_dirX_T <= ((ball_dirX AND NOT CollisionX2 AND CollisionX1 AND 
+	ResetCollision)
+	OR (NOT ball_dirX AND CollisionX2 AND NOT CollisionX1 AND 
+	ResetCollision));
+
+FTCPE_ball_dirY: FTCPE port map (ball_dirY,ball_dirY_T,clk,'0','0');
+ball_dirY_T <= ((ball_dirY AND NOT CollisionY2 AND CollisionY1 AND 
+	ResetCollision)
+	OR (NOT ball_dirY AND CollisionY2 AND NOT CollisionY1 AND 
+	ResetCollision));
+
+FDCPE_ball_inX: FDCPE port map (ball_inX,ball_inX_D,clk,'0','0');
+ball_inX_D <= ((ball_inX AND 
+	$OpTx$Mcompar_ball_inX_cmp_eq0000_AEB_or00001/Mcompar_ball_inX_cmp_eq0000_AEB_or00001_D2_INV$1754)
+	OR (ball_inX AND NOT $OpTx$$OpTx$INV$1072_INV$1750)
+	OR (NOT CounterX(5) AND ball_inX AND 
+	ball_inX_addsub0000(5)/ball_inX_addsub0000(5)_D)
+	OR (CounterX(5) AND ball_inX AND 
+	NOT ball_inX_addsub0000(5)/ball_inX_addsub0000(5)_D)
+	OR (ballX(9) AND NOT CounterX(9) AND ball_inX)
+	OR (ballX(4) AND CounterX(4) AND ball_inX)
+	OR (NOT ballX(4) AND NOT CounterX(4) AND ball_inX)
+	OR (NOT ballX(4) AND NOT ballX(8) AND CounterX(8) AND ball_inX)
+	OR (NOT ballX(5) AND NOT ballX(8) AND CounterX(8) AND ball_inX)
+	OR (NOT ballX(6) AND NOT ballX(8) AND CounterX(8) AND ball_inX)
+	OR (NOT ballX(7) AND NOT ballX(8) AND CounterX(8) AND ball_inX)
+	OR (ballX(8) AND ballX(9) AND NOT CounterX(8) AND ball_inX)
+	OR (NOT ballX(4) AND NOT ballX(9) AND CounterX(9) AND ball_inX)
+	OR (NOT ballX(5) AND NOT ballX(9) AND CounterX(9) AND ball_inX)
+	OR (NOT ballX(6) AND NOT ballX(9) AND CounterX(9) AND ball_inX)
+	OR (NOT ballX(7) AND NOT ballX(9) AND CounterX(9) AND ball_inX)
+	OR (NOT ballX(9) AND CounterX(9) AND CounterX(8) AND ball_inX)
+	OR (ballX(8) AND NOT CounterX(9) AND NOT CounterX(8) AND ball_inX)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	ballX(8) AND CounterX(8) AND ball_inX)
+	OR (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7) AND 
+	NOT ballX(8) AND NOT CounterX(8) AND ball_inX)
+	OR (ballX(9) AND ballX(2) AND CounterX(9) AND CounterX(2) AND 
+	ball_inY AND NOT ball_inX AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1100 AND 
+	$OpTx$FX_DC$1098 AND NOT $OpTx$INV$1074)
+	OR (NOT ballX(9) AND ballX(2) AND NOT CounterX(9) AND CounterX(2) AND 
+	ball_inY AND NOT ball_inX AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1100 AND 
+	$OpTx$FX_DC$1098 AND NOT $OpTx$INV$1074)
+	OR (ballX(9) AND NOT ballX(2) AND CounterX(9) AND NOT CounterX(2) AND 
+	ball_inY AND NOT ball_inX AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1100 AND 
+	$OpTx$FX_DC$1098 AND NOT $OpTx$INV$1074)
+	OR (NOT ballX(9) AND NOT ballX(2) AND NOT CounterX(9) AND NOT CounterX(2) AND 
+	ball_inY AND NOT ball_inX AND NOT $OpTx$INV$1073 AND $OpTx$FX_DC$1100 AND 
+	$OpTx$FX_DC$1098 AND NOT $OpTx$INV$1074));
+
+
+ball_inX_addsub0000(5)/ball_inX_addsub0000(5)_D <= ballX(4)
+	 XOR 
+ball_inX_addsub0000(5)/ball_inX_addsub0000(5)_D <= ballX(5);
+
+
+ball_inX_addsub0000(8)/ball_inX_addsub0000(8)_D <= ballX(8)
+	 XOR 
+ball_inX_addsub0000(8)/ball_inX_addsub0000(8)_D <= (ballX(4) AND ballX(5) AND ballX(6) AND ballX(7));
+
+FDCPE_ball_inY: FDCPE port map (ball_inY,ball_inY_D,clk,'0','0');
+ball_inY_D <= ((CounterY(8) AND NOT ballY_0_8 AND 
+	NOT $OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND 
+	Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2 AND $OpTx$$OpTx$INV$1075_INV$1751)
+	OR (CounterY(5) AND NOT ballY_0_5 AND NOT ball_inY)
+	OR (NOT CounterY(5) AND ballY_0_5 AND NOT ball_inY)
+	OR (CounterY(6) AND NOT ballY_0_6 AND NOT ball_inY)
+	OR (NOT CounterY(6) AND ballY_0_6 AND NOT ball_inY)
+	OR (CounterY(7) AND NOT ballY_0_7 AND NOT ball_inY)
+	OR (NOT CounterY(7) AND ballY_0_7 AND NOT ball_inY)
+	OR (NOT CounterY(8) AND ballY_0_8 AND NOT ball_inY)
+	OR (CounterY(8) AND NOT ballY_0_8 AND NOT ball_inY)
+	OR (CounterY(1) AND NOT ballY_0_1 AND NOT ball_inY)
+	OR (NOT CounterY(1) AND ballY_0_1 AND NOT ball_inY)
+	OR (CounterY(0) AND NOT ballY_0_0 AND NOT ball_inY)
+	OR (NOT CounterY(0) AND ballY_0_0 AND NOT ball_inY)
+	OR (NOT CounterY(2) AND ballY_0_2 AND NOT ball_inY)
+	OR (CounterY(2) AND NOT ballY_0_2 AND NOT ball_inY)
+	OR (NOT CounterY(4) AND ballY_0_4 AND NOT ball_inY)
+	OR (CounterY(4) AND NOT ballY_0_4 AND NOT ball_inY)
+	OR (NOT CounterY(3) AND ballY_0_3 AND NOT ball_inY)
+	OR (CounterY(3) AND NOT ballY_0_3 AND NOT ball_inY)
+	OR (CounterY(8) AND ballY_0_8 AND ball_inY AND 
+	NOT $OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND 
+	NOT Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2 AND $OpTx$$OpTx$INV$1075_INV$1751)
+	OR (NOT CounterY(8) AND NOT ballY_0_8 AND ball_inY AND 
+	NOT $OpTx$Mcompar_ball_inY_cmp_eq0000_AEB_or00001/Mcompar_ball_inY_cmp_eq0000_AEB_or00001_D2_INV$1755 AND 
+	NOT Madd_ball_inY_addsub0000__and0002/Madd_ball_inY_addsub0000__and0002_D2 AND $OpTx$$OpTx$INV$1075_INV$1751));
+
+FTCPE_inDisplayArea: FTCPE port map (inDisplayArea,inDisplayArea_T,clk,'0','0');
+inDisplayArea_T <= ((CounterX(9) AND CounterX(4) AND CounterX(5) AND 
+	NOT CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND CounterX(3) AND 
+	CounterX(1) AND CounterX(2) AND CounterX(0) AND inDisplayArea)
+	OR (NOT CounterY(5) AND CounterX(9) AND CounterX(4) AND 
+	CounterX(5) AND CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND 
+	CounterX(3) AND CounterX(1) AND CounterX(2) AND CounterX(0) AND 
+	NOT inDisplayArea)
+	OR (NOT CounterY(6) AND CounterX(9) AND CounterX(4) AND 
+	CounterX(5) AND CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND 
+	CounterX(3) AND CounterX(1) AND CounterX(2) AND CounterX(0) AND 
+	NOT inDisplayArea)
+	OR (NOT CounterY(7) AND CounterX(9) AND CounterX(4) AND 
+	CounterX(5) AND CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND 
+	CounterX(3) AND CounterX(1) AND CounterX(2) AND CounterX(0) AND 
+	NOT inDisplayArea)
+	OR (NOT CounterY(8) AND CounterX(9) AND CounterX(4) AND 
+	CounterX(5) AND CounterX(7) AND NOT CounterX(8) AND CounterX(6) AND 
+	CounterX(3) AND CounterX(1) AND CounterX(2) AND CounterX(0) AND 
+	NOT inDisplayArea));
+
+FDCPE_quadAr0: FDCPE port map (quadAr(0),quadA,clk,'0','0');
+
+FDCPE_quadAr1: FDCPE port map (quadAr(1),quadAr(0),clk,'0','0');
+
+FDCPE_quadAr2: FDCPE port map (quadAr(2),quadAr(1),clk,'0','0');
+
+FDCPE_quadBr0: FDCPE port map (quadBr(0),quadB,clk,'0','0');
+
+FDCPE_quadBr1: FDCPE port map (quadBr(1),quadBr(0),clk,'0','0');
+
+FDCPE_quadBr2: FDCPE port map (quadBr(2),quadBr(1),clk,'0','0');
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-5-PC44
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

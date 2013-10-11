@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/ramsey_mcgrath/Xilinx/Workspace/VGAViaFPGA/pong.xst" -ofn "C:/Users/ramsey_mcgrath/Xilinx/Workspace/VGAViaFPGA/pong.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pong.ucf -p xc9572xl-PC44-5 pong.ngc pong.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pong.ngd 
+XSLTProcess pong_build.xml 
+cpldfit -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pong.ngd 
+XSLTProcess pong_build.xml 
